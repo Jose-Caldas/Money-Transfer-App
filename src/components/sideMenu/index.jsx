@@ -1,7 +1,15 @@
 import React from "react";
-import { Container, Section } from "./styles";
+import { Container, Section, Footer } from "./styles";
 import image from "../../assets/avatar.png";
-import { FiGrid } from "react-icons/fi";
+import {
+  FiGrid,
+  FiRepeat,
+  FiShuffle,
+  FiCreditCard,
+  FiDatabase,
+  FiSettings,
+  FiLogOut,
+} from "react-icons/fi";
 
 function SideMenu() {
   return (
@@ -16,21 +24,33 @@ function SideMenu() {
         <h3>Services</h3>
       </Section>
       <Section>
-        <FiGrid />
+        <FiRepeat />
         <h3>Transactions</h3>
       </Section>
       <Section>
-        <FiGrid />
-        <h3>Send Money</h3>
+        <FiShuffle style={{ color: "var(--pink200) ", fontWeight: "600" }} />
+        <h3 style={{ color: "var(--pink200)", fontWeight: "600" }}>
+          Send Money
+        </h3>
       </Section>
       <Section>
-        <FiGrid />
+        <FiCreditCard />
         <h3>Cards</h3>
       </Section>
       <Section>
-        <FiGrid />
-        <h3>Cards</h3>
+        <FiDatabase />
+        <h3>History</h3>
       </Section>
+      <Footer>
+        <Section>
+          <FiSettings />
+          <h3>Settings</h3>
+        </Section>
+        <Section>
+          <FiLogOut />
+          <h3>Log Out</h3>
+        </Section>
+      </Footer>
     </Container>
   );
 }
