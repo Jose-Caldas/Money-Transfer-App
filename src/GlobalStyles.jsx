@@ -23,6 +23,15 @@ export default createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+@media(max-width:768px){
+  .App{
+   
+   
+  }
+}
+
+
 body{
   background-color: #dddd;
   
@@ -31,6 +40,11 @@ body{
  
 .App{
   display:flex;
+  background: #fff;
+  align-items:center;
+ justify-content:center;
+ flex-wrap:wrap;
+  
 }
 
 

@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* width: 25%; */
   height: 100vh;
   background-color: #fff;
+  padding: 3rem 5rem 0 5rem;
 
   header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-top: 3rem;
   }
+
   h1 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -27,8 +30,6 @@ export const Container = styled.div`
 
 export const Section = styled.div`
   display: flex;
-  align-items: center;
-  padding-left: 2.8rem;
   margin-bottom: 1.5rem;
 
   h3 {
@@ -45,5 +46,5 @@ export const Section = styled.div`
 `;
 
 export const Footer = styled.div`
-  margin-top: 5rem;
+  margin-top: 10rem;
 `;
