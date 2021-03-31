@@ -33,7 +33,7 @@ export default createGlobalStyle`
 
 
 body{
-  background-color: #dddd;
+ 
   
 }
 
@@ -42,8 +42,8 @@ body{
   display:flex;
   background: #fff;
   align-items:center;
- justify-content:center;
- flex-wrap:wrap;
+  justify-content:center;
+
   
 }
 

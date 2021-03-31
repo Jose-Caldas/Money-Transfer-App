@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* width: 35%; */
-  height: 100vh;
+  width: 50%;
+  /* height: 100vh; */
   background-color: #fff;
   padding: 3rem 5rem 0 5rem;
 
@@ -70,7 +70,7 @@ export const Container = styled.div`
     background: #f364a2;
     border-radius: 4px;
     color: var(--white);
-    padding: 20px 0;
+    padding: 15px 0;
     font-size: 20px;
     font-weight: 500;
   }
@@ -81,7 +81,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 220px;
-  margin-top: 5.3rem;
+  margin-top: 4rem;
   padding: 2.5rem;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;

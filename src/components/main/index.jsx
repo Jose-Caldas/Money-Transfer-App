@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "./styles";
 // import image from "../../assets/brasil.png";
-import { FiRefreshCcw, FiCalendar } from "react-icons/fi";
+import { FiRefreshCcw } from "react-icons/fi";
 
 function Main() {
   return (
@@ -40,7 +40,7 @@ function Main() {
         <h1>Choose a plan:</h1>
         <div>
           <h2>Choose the date:</h2>
-          <FiCalendar />
+          <input type="date" name="" id="" />
         </div>
       </div>
       <div className="options">
@@ -53,6 +53,44 @@ function Main() {
             </div>
             <div>
               <span>$ 0.99</span>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div
+        className="options"
+        style={{ background: "none", border: "2px solid #e4e7eb" }}
+      >
+        <label For="rd2">
+          <input type="radio" name="rd" id="rd2" />
+          <div class="opt">
+            <div>
+              <h2>Get 27 July 2020 till 12pm</h2>
+              <small>Standard</small>
+            </div>
+            <div>
+              <span>$ 1.00</span>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div
+        className="options"
+        style={{
+          background: "none",
+          border: "2px solid #e4e7eb",
+        }}
+      >
+        <label For="rd3">
+          <input type="radio" name="rd" id="rd3" />
+          <div class="opt">
+            <div>
+              <h2>Get today till 8pm</h2>
+              <small>Only on working days from 11am to 8pm</small>
+            </div>
+            <div>
+              <span>$ 1.00</span>
             </div>
           </div>
         </label>

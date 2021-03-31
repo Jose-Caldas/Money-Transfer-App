@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* width: 40%; */
-  height: 100vh;
+  width: 50%;
+  /* height: 100vh; */
   padding-top: 3rem;
   background: #fff;
 
@@ -15,6 +15,7 @@ export const Container = styled.div`
   .content {
     display: flex;
     align-items: center;
+
     h2 {
       color: var(--pink200);
       margin-right: 12px;
@@ -36,7 +37,7 @@ export const Container = styled.div`
     height: 53px;
     border: none;
     border-radius: 8px;
-    margin-top: 61px;
+    margin-top: 2rem;
     font-size: 1rem;
   }
   .transfer {
@@ -79,7 +80,7 @@ export const Container = styled.div`
   .choose {
     display: flex;
     justify-content: space-between;
-    margin-top: 3.75rem;
+    margin-top: 2rem;
   }
   h1 {
     font-size: 24px;
@@ -90,6 +91,7 @@ export const Container = styled.div`
     color: var(--title);
     font-size: 18px;
     font-weight: 400;
+    margin-right: 10px;
   }
   .choose > div {
     display: flex;
@@ -106,6 +108,7 @@ export const Container = styled.div`
     padding: 10px;
     border-radius: 4px;
     background: #fff6f9;
+    margin-bottom: 1rem;
   }
   label {
     display: flex;
@@ -117,7 +120,9 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  #rd {
+  #rd,
+  #rd2,
+  #rd3 {
     width: 20px;
     height: 20px;
     color: var(--pink200);

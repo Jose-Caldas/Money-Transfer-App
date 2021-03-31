@@ -4,10 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* width: 25%; */
-  height: 100vh;
+  width: 25%;
+  /* height: 100vh; */
   background-color: #fff;
-  padding: 3rem 5rem 0 5rem;
+  padding: 3rem 3rem 0 5rem;
 
   header {
     display: flex;
