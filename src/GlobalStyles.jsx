@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import "antd/dist/antd.css";
 
 export default createGlobalStyle`
 :root {
@@ -47,9 +48,14 @@ body{
   
 }
 
-
-
-
+.refresh{
+  display: flex;
+    align-items: flex-end;
+    /* justify-content: flex-end; */
+    padding-bottom:50px;
+  color:var(--pink200);
+  font-size:30px;
+}
 
 ul,
 li {

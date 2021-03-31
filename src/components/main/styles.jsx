@@ -27,56 +27,7 @@ export const Container = styled.div`
       font-size: 1rem;
     }
   }
-  .select {
-    display: flex;
-    justify-content: space-between;
-  }
-  select {
-    background: #f5f7fa;
-    width: 267px;
-    height: 53px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 2rem;
-    font-size: 1rem;
-  }
-  .transfer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .transfer > div {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 267px;
-    height: 128px;
-    background-color: #f5f7fa;
-    margin-top: 28px;
-    border-radius: 8px;
-    padding: 20px;
-  }
-  button {
-    color: var(--pink200);
-    margin: 40px 25px 0 25px;
-    background-color: transparent;
-    font-size: 22px;
-  }
-  .transfer input {
-    height: 70%;
-    background-color: #f5f7fa;
-    border: none;
-    font-size: 30px;
-    color: var(--title);
-    font-weight: 600;
-  }
 
-  small {
-    color: var(--subTitle);
-    font-size: 14px;
-    display: flex;
-    justify-content: start;
-  }
   .choose {
     display: flex;
     justify-content: space-between;
@@ -104,14 +55,24 @@ export const Container = styled.div`
   }
   .options {
     width: 100%;
-    border: 2px solid #ff8cba;
+
     padding: 10px;
     border-radius: 4px;
-    background: #fff6f9;
     margin-bottom: 1rem;
   }
+  .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+  }
+
   label {
     display: flex;
+    border: 2px solid #f5f7fa;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
   }
 
   .opt {
@@ -120,12 +81,88 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  #rd,
-  #rd2,
-  #rd3 {
-    width: 20px;
-    height: 20px;
+
+  .opt > div {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 20px;
+      width: 20px;
+      height: 20px;
+      color: white;
+      border: 1px solid gray;
+      border-radius: 100%;
+    }
+  }
+
+  #radio1,
+  #radio2,
+  #radio3 {
+    display: none;
+  }
+
+  input:checked + label {
+    background: #fff6f9;
+    border: 2px solid #ff8cba;
+  }
+`;
+
+export const CurrancyContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const SelectContainer = styled.div`
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 1rem;
+
+  .transfer {
+    /* background-color: red; */
+  }
+  .transfer > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 8px;
+  }
+  select {
+    width: 267px;
+    height: 53px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f5f7fa;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+  }
+  button {
     color: var(--pink200);
-    margin: 20px 20px 20px 0;
+    margin: 40px 25px 0 25px;
+    background-color: transparent;
+    font-size: 22px;
+    background-color: green;
+  }
+  .transfer input {
+    background-color: #f5f7fa;
+    width: 267px;
+    height: 128px;
+    border: none;
+    font-size: 30px;
+    color: var(--title);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  small {
+    color: var(--subTitle);
+    font-size: 14px;
+    display: flex;
+    justify-content: start;
   }
 `;

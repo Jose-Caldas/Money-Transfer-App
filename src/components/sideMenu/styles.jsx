@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: 25%;
-  /* height: 100vh; */
+  height: 100vh;
   background-color: #fff;
   padding: 3rem 3rem 0 5rem;
 
@@ -42,6 +42,17 @@ export const Section = styled.div`
     width: 20px;
     height: 20px;
     color: var(--title);
+    font-weight: 500;
+  }
+  button {
+    display: flex;
+    background: transparent;
+    &:focus {
+      svg,
+      h3 {
+        color: var(--pink200);
+      }
+    }
   }
 `;
 

@@ -20,35 +20,47 @@ function SideMenu() {
         <h2>2312T45B</h2>
       </header>
       <Section>
-        <FiGrid />
-        <h3>Services</h3>
+        <button>
+          <FiGrid />
+          <h3>Services</h3>
+        </button>
       </Section>
       <Section>
-        <FiRepeat />
-        <h3>Transactions</h3>
+        <button>
+          <FiRepeat />
+          <h3>Transactions</h3>
+        </button>
       </Section>
       <Section>
-        <FiShuffle style={{ color: "var(--pink200) ", fontWeight: "600" }} />
-        <h3 style={{ color: "var(--pink200)", fontWeight: "600" }}>
-          Send Money
-        </h3>
+        <button onFocus>
+          <FiShuffle />
+          <h3>Send Money</h3>
+        </button>
       </Section>
       <Section>
-        <FiCreditCard />
-        <h3>Cards</h3>
+        <button>
+          <FiCreditCard />
+          <h3>Cards</h3>
+        </button>
       </Section>
       <Section>
-        <FiDatabase />
-        <h3>History</h3>
+        <button>
+          <FiDatabase />
+          <h3>History</h3>
+        </button>
       </Section>
       <Footer>
         <Section>
-          <FiSettings />
-          <h3>Settings</h3>
+          <button>
+            <FiSettings />
+            <h3>Settings</h3>
+          </button>
         </Section>
         <Section>
-          <FiLogOut />
-          <h3>Log Out</h3>
+          <button>
+            <FiLogOut />
+            <h3>Log Out</h3>
+          </button>
         </Section>
       </Footer>
     </Container>
