@@ -42,26 +42,28 @@ function Aside() {
         </div>
       </Wrapper>
       <div className="info">
-        <div className="info-content">
-          <div>
-            <FiCalendar />
-            <h3>Delivery</h3>
+        <div>
+          <div className="info-content">
+            <div>
+              <FiCalendar />
+              <h3>Delivery</h3>
+            </div>
+            <strong>27 July till 12pm</strong>
           </div>
-          <strong>27 July till 12pm</strong>
-        </div>
-        <div className="info-content">
-          <div>
-            <FiDollarSign />
-            <h3>Conversion rate</h3>
+          <div className="info-content">
+            <div>
+              <FiDollarSign />
+              <h3>Conversion rate</h3>
+            </div>
+            <strong>22,124</strong>
           </div>
-          <strong>22,124</strong>
-        </div>
-        <div className="info-content">
-          <div>
-            <FiShuffle />
-            <h3>Recipient gets</h3>
+          <div className="info-content">
+            <div>
+              <FiShuffle />
+              <h3>Recipient gets</h3>
+            </div>
+            <strong>4,124</strong>
           </div>
-          <strong>4,124</strong>
         </div>
         <button>Confirm</button>
       </div>

@@ -16,8 +16,10 @@ function SideMenu() {
     <Container>
       <header>
         <img src={image} alt="" srcset="" />
-        <h1>José Caldas</h1>
-        <h2>2312T45B</h2>
+        <div className="info">
+          <h1>José Caldas</h1>
+          <h2>2312T45B</h2>
+        </div>
       </header>
       <Section>
         <button>

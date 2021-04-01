@@ -4,27 +4,50 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 25%;
-  height: 100vh;
+  min-width: 25%;
   background-color: #fff;
-  padding: 3rem 3rem 0 5rem;
+  padding-top: 3rem;
 
   header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
   }
 
-  h1 {
+  .info h1 {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 1rem 0 0.5rem;
+    text-align: center;
   }
-  h2 {
+  .info h2 {
     color: var(--subTitle);
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 2rem;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: none;
+
+    header {
+      flex-direction: row;
+      align-items: center;
+    }
+    img {
+      margin: 0 20px 0 0;
+    }
+
+    .info h1,
+    h2 {
+      margin: none;
+    }
   }
 `;
 

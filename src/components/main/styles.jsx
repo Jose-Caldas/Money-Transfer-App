@@ -1,12 +1,42 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  @media (max-width: 768px) {
+    padding: none;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .choose {
+      flex-direction: column;
+    }
+    .select {
+    }
+
+    .options {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .opt {
+      width: 100%;
+      /* height: 40px; */
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  /* height: 100vh; */
-  padding-top: 3rem;
+  padding-right: 7rem;
   background: #fff;
 
-  h1 {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header h1 {
     font-size: 30px;
     color: var(--title);
     font-weight: 500;
@@ -70,9 +100,10 @@ export const Container = styled.div`
   label {
     display: flex;
     border: 2px solid #f5f7fa;
-    padding: 10px;
+    padding: 15px;
     border-radius: 4px;
     cursor: pointer;
+    margin-bottom: 10px;
   }
 
   .opt {
@@ -110,44 +141,43 @@ export const Container = styled.div`
 
 export const CurrancyContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 `;
 
 export const SelectContainer = styled.div`
+  @media screen and (max-width: 768px) {
+    .transfer {
+      flex-direction: column;
+    }
+    .select > div {
+      justify-content: center;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
   border: none;
   border-radius: 8px;
   margin-top: 1rem;
   font-size: 1rem;
 
-  .transfer {
-    /* background-color: red; */
+  .select {
+    /* display: flex; */
+    justify-content: space-between;
   }
-  .transfer > div {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    border-radius: 8px;
-  }
-  select {
+  .select > div {
     width: 267px;
-    height: 53px;
-    display: flex;
-    justify-content: flex-end;
-    background-color: #f5f7fa;
     margin-bottom: 20px;
-    border: none;
-    outline: none;
-    padding: 10px;
   }
-  button {
-    color: var(--pink200);
-    margin: 40px 25px 0 25px;
-    background-color: transparent;
-    font-size: 22px;
-    background-color: green;
+
+  .transfer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .transfer input {
+
+  .transfer-content {
     background-color: #f5f7fa;
     width: 267px;
     height: 128px;
@@ -157,6 +187,20 @@ export const SelectContainer = styled.div`
     font-weight: 600;
     text-align: center;
     border-radius: 8px;
+    padding: 10px;
+  }
+
+  .transfer button {
+    background-color: transparent;
+    font-size: 30px;
+    color: var(--pink200);
+  }
+
+  .transfer input {
+    width: 80%;
+    height: 80%;
+    border: none;
+    background-color: #f5f7fa;
   }
 
   small {

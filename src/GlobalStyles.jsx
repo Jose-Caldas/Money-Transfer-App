@@ -25,18 +25,23 @@ export default createGlobalStyle`
   font-family: 'Inter', sans-serif;
 }
 
-@media(max-width:768px){
-  .App{
-   
-   
+
+
+
+body {
+    -webkit-font-smoothing: antialiased !important;
   }
-}
+
+  body html #root {
+    height: 100%;
+  }
 
 
-body{
+
+ 
  
   
-}
+
 
  
 .App{
@@ -44,9 +49,26 @@ body{
   background: #fff;
   align-items:center;
   justify-content:center;
+  padding: 0 5rem;
 
   
 }
+
+@media(max-width:768px){
+  .App{
+    flex-direction:column;
+    padding:0 10px;
+  }
+  .App > div{
+    flex-wrap:wrap;
+    width:100%;
+    padding:1rem ;
+    align-items:center;
+    justify-content:center;
+   
+  }
+}
+
 
 .refresh{
   display: flex;

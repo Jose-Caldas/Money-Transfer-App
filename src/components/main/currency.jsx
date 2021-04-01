@@ -1,54 +1,43 @@
 import React from "react";
+import { FiRefreshCcw } from "react-icons/fi";
+
 import { SelectContainer } from "./styles";
 import { Select } from "antd";
 
 const { Option } = Select;
 
 function Currency(props) {
-  const {
-    currencyOptions,
-    selectedCurrency,
-
-    onChangeCurrency,
-    amount,
-    onChangeAmount,
-  } = props;
-
   return (
     <>
       <SelectContainer>
-        <div className="select">
-          {/* <Select>
-            {currencyOptions.map((option) => (
-              <Option key={option} value={option}>
-                {option}
-              </Option>
-            ))}
-          </Select> */}
-          <select
-            value={selectedCurrency}
-            onChange={onChangeCurrency}
-            name="countries"
-            id="countries"
-          >
-            {currencyOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+        <div>
+          <div></div>
+          <div></div>
         </div>
 
-        <div class="transfer">
+        <div className="transfer">
+          <div className="select">
+            <Select>
+              <Option>FROM</Option>
+            </Select>
+            <div class="transfer-content">
+              <small>You send</small>
+              <input type="number"></input>
+            </div>
+          </div>
           <div>
-            <small>You send</small>
-            <input
-              value={amount}
-              onChange={onChangeAmount}
-              type="number"
-              name=""
-              id=""
-            />
+            <button>
+              <FiRefreshCcw />
+            </button>
+          </div>
+          <div className="select">
+            <Select>
+              <Option>To</Option>
+            </Select>
+            <div class="transfer-content">
+              <small>Recipient gets</small>
+              <input type="number"></input>
+            </div>
           </div>
         </div>
       </SelectContainer>
