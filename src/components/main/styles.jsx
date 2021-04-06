@@ -1,55 +1,37 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media (max-width: 768px) {
-    padding: none;
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .choose {
-      flex-direction: column;
-    }
-    .select {
-    }
-
-    .options {
-      flex: 1;
-      justify-content: center;
-    }
-
-    .opt {
-      width: 100%;
-      /* height: 40px; */
-    }
-  }
-
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding-right: 7rem;
+  padding: 0 5rem;
   background: #fff;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin-bottom: 5rem;
+
+    header {
+    }
+  }
 
   header {
     display: flex;
     flex-direction: column;
   }
   header h1 {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--title);
     font-weight: 500;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
-  .content {
+  .header-content {
     display: flex;
     align-items: center;
 
     h2 {
       color: var(--pink200);
       margin-right: 12px;
-      font-size: 30px;
+      font-size: 20px;
     }
     span {
       color: var(--subTitle);
@@ -61,23 +43,24 @@ export const Container = styled.div`
   .choose {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
   h1 {
     font-size: 24px;
     color: var(--title);
     font-weight: 500;
   }
-  h2 {
+  h4 {
     color: var(--title);
     font-size: 18px;
     font-weight: 400;
     margin-right: 10px;
   }
+
   .choose > div {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
   }
   .choose svg {
     font-size: 18px;
@@ -94,7 +77,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 250px;
+    height: 200px;
   }
 
   label {
@@ -127,6 +110,18 @@ export const Container = styled.div`
     }
   }
 
+  @media (max-width: 768px) {
+    .choose > div {
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+    }
+
+    .option-content {
+      margin-bottom: 2rem;
+      background-color: blue;
+    }
+  }
+
   #radio1,
   #radio2,
   #radio3 {
@@ -149,9 +144,14 @@ export const SelectContainer = styled.div`
   @media screen and (max-width: 768px) {
     .transfer {
       flex-direction: column;
+      margin-bottom: 2rem;
     }
     .select > div {
       justify-content: center;
+    }
+    .transfer {
+      align-items: center;
+      /* justify-content: space-between; */
     }
   }
 
@@ -163,12 +163,17 @@ export const SelectContainer = styled.div`
   font-size: 1rem;
 
   .select {
-    /* display: flex; */
     justify-content: space-between;
   }
   .select > div {
     width: 267px;
+
     margin-bottom: 20px;
+  }
+
+  .select span img {
+    height: 30px;
+    margin: 0 10px 0 40px;
   }
 
   .transfer {

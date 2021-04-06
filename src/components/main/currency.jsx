@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiRefreshCcw } from "react-icons/fi";
 
 import { SelectContainer } from "./styles";
 import { Select } from "antd";
 
+import currenciesMock from "../../mocks/currencies.json";
+
 const { Option } = Select;
 
-function Currency(props) {
+function Currency() {
+  const [currencies, setCurrencies] = useState(currenciesMock.currencies);
+  console.log(currencies);
   return (
     <>
       <SelectContainer>
@@ -18,7 +22,13 @@ function Currency(props) {
         <div className="transfer">
           <div className="select">
             <Select>
-              <Option>FROM</Option>
+              {currencies.map((currencies) => (
+                <Option value={currencies.value} id={currencies.id}>
+                  From:
+                  <img src={currencies.flag} alt="" srcset="" />
+                  {currencies.label}
+                </Option>
+              ))}
             </Select>
             <div class="transfer-content">
               <small>You send</small>
@@ -32,7 +42,13 @@ function Currency(props) {
           </div>
           <div className="select">
             <Select>
-              <Option>To</Option>
+              {currencies.map((currencies) => (
+                <Option value={currencies.value} id={currencies.id}>
+                  To:
+                  <img src={currencies.flag} alt="" srcset="" />
+                  {currencies.label}
+                </Option>
+              ))}
             </Select>
             <div class="transfer-content">
               <small>Recipient gets</small>

@@ -11,7 +11,7 @@ function Main() {
     <Container>
       <header>
         <h1>Send Money</h1>
-        <div class="content">
+        <div class="header-content">
           <h2>22,124</h2>
           <span>available</span>
         </div>
@@ -23,12 +23,12 @@ function Main() {
       <div className="choose">
         <h1>Choose a plan:</h1>
         <div>
-          <h2>Choose the date:</h2>
+          <h4>Choose the date:</h4>
           <DatePicker onChange={console.log} />
         </div>
       </div>
       <div className="options">
-        <div>
+        <div className="option-content">
           <input type="radio" id="radio1" name="input-radio" />
           <label for="radio1">
             <div class="opt">

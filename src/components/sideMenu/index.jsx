@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Section, Footer } from "./styles";
+import { Container } from "./styles";
 import image from "../../assets/avatar.png";
 import {
   FiGrid,
@@ -13,58 +13,52 @@ import {
 
 function SideMenu() {
   return (
-    <Container>
+    <Container id="app">
       <header>
         <img src={image} alt="" srcset="" />
         <div className="info">
-          <h1>José Caldas</h1>
-          <h2>2312T45B</h2>
+          <strong>José Caldas</strong>
+          <small>2312T45B</small>
         </div>
       </header>
-      <Section>
-        <button>
-          <FiGrid />
-          <h3>Services</h3>
-        </button>
-      </Section>
-      <Section>
-        <button>
-          <FiRepeat />
-          <h3>Transactions</h3>
-        </button>
-      </Section>
-      <Section>
-        <button onFocus>
-          <FiShuffle />
-          <h3>Send Money</h3>
-        </button>
-      </Section>
-      <Section>
-        <button>
-          <FiCreditCard />
-          <h3>Cards</h3>
-        </button>
-      </Section>
-      <Section>
-        <button>
-          <FiDatabase />
-          <h3>History</h3>
-        </button>
-      </Section>
-      <Footer>
-        <Section>
-          <button>
+      <div className="navigation">
+        <ul>
+          <li>
+            <span>
+              <FiGrid />
+              Services
+            </span>
+          </li>
+          <li>
+            <FiRepeat />
+            <span>Transactions</span>
+          </li>
+          <li>
+            <FiShuffle style={{ color: "var(--pink200)" }} />
+            <span style={{ color: "var(--pink200)" }}>Send Money</span>
+          </li>
+          <li>
+            <FiCreditCard />
+            <span>Cards</span>
+          </li>
+          <li>
+            <FiDatabase />
+            <span>History</span>
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <ul>
+          <li>
             <FiSettings />
-            <h3>Settings</h3>
-          </button>
-        </Section>
-        <Section>
-          <button>
+            <span>Settings</span>
+          </li>
+          <li>
             <FiLogOut />
-            <h3>Log Out</h3>
-          </button>
-        </Section>
-      </Footer>
+            <span>Log Out</span>
+          </li>
+        </ul>
+      </footer>
     </Container>
   );
 }

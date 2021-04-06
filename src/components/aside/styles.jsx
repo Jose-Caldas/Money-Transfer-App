@@ -10,9 +10,7 @@ export const Container = styled.div`
     }
   }
 
-  width: 35%;
   background-color: #fff;
-  /* padding: 3rem 5rem 0 5rem; */
 
   header {
     display: flex;

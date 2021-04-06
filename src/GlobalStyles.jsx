@@ -34,6 +34,7 @@ body {
 
   body html #root {
     height: 100%;
+    font-size:1.3vh;
   }
 
 
@@ -46,34 +47,35 @@ body {
  
 .App{
   display:flex;
+  /* flex-wrap:wrap; */
+  max-width:1440px;
+  max-height: 1024px;
   background: #fff;
-  align-items:center;
-  justify-content:center;
-  padding: 0 5rem;
+  padding: 3rem 1rem 0 1rem;
+  margin:0 auto;
+ 
 
   
 }
 
-@media(max-width:768px){
-  .App{
-    flex-direction:column;
-    padding:0 10px;
-  }
-  .App > div{
-    flex-wrap:wrap;
-    width:100%;
-    padding:1rem ;
-    align-items:center;
-    justify-content:center;
-   
-  }
-}
+/* ==================================responsive============================ */
 
+@media(max-width:1024px){
+.App{
+  display:flex;
+  flex-direction:column;
+  max-width:1440px;
+  max-height: 1024px;
+  background: #fff;
+  padding: 3rem 1rem 0 1rem;
+  margin:0 auto;
+ 
+}
+}
 
 .refresh{
   display: flex;
     align-items: flex-end;
-    /* justify-content: flex-end; */
     padding-bottom:50px;
   color:var(--pink200);
   font-size:30px;
