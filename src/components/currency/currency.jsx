@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { FiRefreshCcw } from "react-icons/fi";
 
-import { SelectContainer } from "./styles";
 import { Select } from "antd";
 
 import currenciesMock from "../../mocks/currencies.json";
+import { SelectContainer } from "./styled";
 
 const { Option } = Select;
 

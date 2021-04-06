@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
   }
   ul {
     visibility: hidden;
+    width: 0;
   }
 
   input {
@@ -26,6 +27,19 @@ export const Wrapper = styled.div`
 
   .hamburguer {
     background-color: transparent;
+  }
+
+  @media (max-width: 1024px) {
+    .menu {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    ul {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
   }
 
   @media (max-width: 768px) {
@@ -83,7 +97,7 @@ export const Wrapper = styled.div`
     }
 
     input:checked ~ label .menu {
-      box-shadow: 0 0 0 130vw #fff, 0 0 0 130vh #fff;
+      box-shadow: 0 0 0 130vw #f5f7fa, 0 0 0 130vh #f5f7fa;
     }
 
     input:checked ~ label .hamburguer {
@@ -105,15 +119,21 @@ export const Wrapper = styled.div`
     ul {
       position: absolute;
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
       list-style: none;
       opacity: 0;
       transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-
+      width: 100%;
       visibility: visible;
       z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+
+    li {
+      width: 100%;
     }
 
     a {
@@ -122,6 +142,9 @@ export const Wrapper = styled.div`
       text-decoration: none;
       color: var(--title);
       margin-bottom: 25px;
+      width: 100%;
+
+      padding: 5px 40px;
     }
     a svg {
       margin-right: 20px;

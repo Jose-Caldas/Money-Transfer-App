@@ -25,34 +25,15 @@ export default createGlobalStyle`
   font-family: 'Inter', sans-serif;
 }
 
-
-
-
-body {
-    -webkit-font-smoothing: antialiased !important;
-  }
-
-  body html #root {
-    height: 100%;
-    font-size:1.3vh;
-  }
-
-
-
- 
- 
-  
-
-
- 
 .App{
   display:flex;
-  /* flex-wrap:wrap; */
+  width:90%;
   max-width:1440px;
   max-height: 1024px;
   background: #fff;
-  padding: 3rem 1rem 0 1rem;
+  padding: 3rem 2rem 0 2rem;
   margin:0 auto;
+  flex:1 1 0;
  
 
   

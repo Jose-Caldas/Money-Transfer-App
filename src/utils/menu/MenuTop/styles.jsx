@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 0;
 
   visibility: hidden;
 
@@ -11,6 +11,8 @@ export const Wrapper = styled.div`
     position: fixed;
     top: 30px;
     left: 0;
+
+    z-index: 10;
 
     display: flex;
     align-items: center;
@@ -39,18 +41,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Profile = styled.div`
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .info {
     display: flex;
     flex-direction: column;
   }
-
-  @media (max-width: 768px) {
-
 `;

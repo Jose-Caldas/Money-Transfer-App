@@ -3,12 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* width: 30%; */
-  position: fixed;
-  left: 50px;
 
   @media (max-width: 1024px) {
     visibility: hidden;
+    width: 0;
+    height: 0;
   }
 
   header {
