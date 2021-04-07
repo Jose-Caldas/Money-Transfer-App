@@ -46,13 +46,13 @@ export const Wrapper = styled.div`
     .menu {
       width: 60px;
       height: 60px;
-      background-color: #f5f7fa;
+      background-color: #446677;
       border-radius: 50%;
       position: fixed;
       top: 25px;
       right: 25px;
       cursor: pointer;
-      box-shadow: 0 0 0 0 #f5f7fa, 0 0 0 0 #f5f7fa;
+      box-shadow: 0 0 0 0 #446677, 0 0 0 0 #446677;
       transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
 
       visibility: visible;
@@ -60,14 +60,14 @@ export const Wrapper = styled.div`
     }
 
     .menu:hover {
-      box-shadow: 0 0 0 8px #f5f7fa, 0 0 0 8px #f5f7fa;
+      box-shadow: 0 0 0 8px #446677, 0 0 0 8px #446677;
     }
 
     .hamburguer {
       display: block;
       width: 30px;
       height: 2px;
-      background-color: black;
+      background-color: #fff;
       position: relative;
       top: 29px;
       left: 15px;
@@ -80,7 +80,7 @@ export const Wrapper = styled.div`
       display: block;
       width: 100%;
       height: 100%;
-      background-color: black;
+      background-color: #fff;
       position: absolute;
       transition: 0.5s ease-in-out;
     }
@@ -97,7 +97,7 @@ export const Wrapper = styled.div`
     }
 
     input:checked ~ label .menu {
-      box-shadow: 0 0 0 130vw #f5f7fa, 0 0 0 130vh #f5f7fa;
+      box-shadow: 0 0 0 130vw #446677, 0 0 0 130vh #446677;
     }
 
     input:checked ~ label .hamburguer {
@@ -140,7 +140,7 @@ export const Wrapper = styled.div`
       display: block;
       font-size: 20px;
       text-decoration: none;
-      color: var(--title);
+      color: #fff;
       margin-bottom: 25px;
       width: 100%;
 

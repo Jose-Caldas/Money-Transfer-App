@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Button = styled.button`
   width: 100%;
   display: flex;
   align-items: center;
@@ -9,6 +9,18 @@ export const Container = styled.div`
   border-radius: 4px;
   padding: 10px;
   margin-bottom: 10px;
+  background: transparent;
+
+  &:focus {
+    background: #fff6f9;
+    border: 2px solid #ff8cba;
+    border-radius: 4px;
+    .checkbox svg {
+      width: 20px;
+      height: 20px;
+      color: var(--pink200);
+    }
+  }
 
   h2 {
     font-size: 18px;
@@ -30,6 +42,7 @@ export const Container = styled.div`
   .options {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   .center {
@@ -37,14 +50,14 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: start;
   }
 
-  .checkbox {
+  .checkbox svg {
     width: 20px;
     height: 20px;
-    border: 1px solid #616e7c;
-    border-radius: 50%;
-    margin-right: 15px;
+    color: white;
+    margin-right: 20px;
   }
 
   @media (max-width: 768px) {

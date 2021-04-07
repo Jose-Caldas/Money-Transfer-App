@@ -33,8 +33,8 @@ function Menu() {
           </a>
         </li>
         <li>
-          <a href="#app" style={{ color: "var(--pink200)" }}>
-            <FiShuffle style={{ color: "var(--pink200)" }} />
+          <a href="#app">
+            <FiShuffle />
             Send Money
           </a>
         </li>

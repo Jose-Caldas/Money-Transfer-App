@@ -18,7 +18,11 @@ export const SelectContainer = styled.div`
 
   .select span img {
     height: 30px;
+    width: 30px;
     margin: 0 10px 0 40px;
+  }
+  .select option {
+    font-size: 20px;
   }
 
   .transfer {

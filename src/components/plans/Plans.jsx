@@ -1,22 +1,25 @@
 import React from "react";
-import { Container } from "./styled";
+import { Button } from "./styled";
+import { FaCheckCircle } from "react-icons/fa";
 
 function Plans({ title, text, number }) {
+  // const [toggle, setToggle] = useState(true);
+
   return (
-    <Container>
-      <div className="checkbox"></div>
+    <Button>
+      <div className="checkbox">
+        <FaCheckCircle />
+      </div>
       <div className="center">
         <div class="options">
-          <div>
-            <h2>{title}</h2>
-            <small>{text}</small>
-          </div>
+          <h2>{title}</h2>
+          <small>{text}</small>
         </div>
         <div>
           <span>{number}</span>
         </div>
       </div>
-    </Container>
+    </Button>
   );
 }
 
