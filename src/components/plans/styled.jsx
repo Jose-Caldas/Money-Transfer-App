@@ -10,15 +10,21 @@ export const Button = styled.button`
   padding: 10px;
   margin-bottom: 10px;
   background: transparent;
+  &:hover {
+    box-shadow: 0 0 20px var(--gray400);
+    /* transition: 0.2s ease-in-out; */
+  }
 
   &:focus {
     background: #fff6f9;
     border: 2px solid #ff8cba;
     border-radius: 4px;
+
     .checkbox svg {
       width: 20px;
       height: 20px;
       color: var(--pink200);
+      border: none;
     }
   }
 
@@ -58,6 +64,8 @@ export const Button = styled.button`
     height: 20px;
     color: white;
     margin-right: 20px;
+    border: 1px solid gray;
+    border-radius: 50%;
   }
 
   @media (max-width: 768px) {

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FiRefreshCcw } from "react-icons/fi";
 
+import "antd/dist/antd.css";
+import { ConfigProvider } from "antd";
+import ptBR from "antd/lib/locale/pt_BR";
+
 import { Select } from "antd";
 
 import currenciesMock from "../../mocks/currencies.json";
@@ -12,7 +16,7 @@ function Currency() {
   const [currencies, setCurrencies] = useState(currenciesMock.currencies);
   console.log(currencies);
   return (
-    <>
+    <ConfigProvider locale={ptBR}>
       <SelectContainer>
         <div>
           <div></div>
@@ -23,9 +27,20 @@ function Currency() {
           <div className="select">
             <Select>
               {currencies.map((currencies) => (
-                <Option value={currencies.value} id={currencies.id}>
+                <Option
+                  style={{
+                    fontSize: 15,
+                  }}
+                  value={currencies.value}
+                  id={currencies.id}
+                >
                   From:
-                  <img src={currencies.flag} alt="" srcset="" />
+                  <img
+                    src={currencies.flag}
+                    alt=""
+                    srcset=""
+                    style={{ width: 30, height: 30 }}
+                  />
                   {currencies.label}
                 </Option>
               ))}
@@ -43,9 +58,20 @@ function Currency() {
           <div className="select">
             <Select>
               {currencies.map((currencies) => (
-                <Option value={currencies.value} id={currencies.id}>
+                <Option
+                  style={{
+                    fontSize: 15,
+                  }}
+                  value={currencies.value}
+                  id={currencies.id}
+                >
                   To:
-                  <img src={currencies.flag} alt="" srcset="" />
+                  <img
+                    src={currencies.flag}
+                    alt=""
+                    srcset=""
+                    style={{ width: 30, height: 30 }}
+                  />
                   {currencies.label}
                 </Option>
               ))}
@@ -57,7 +83,7 @@ function Currency() {
           </div>
         </div>
       </SelectContainer>
-    </>
+    </ConfigProvider>
   );
 }
 

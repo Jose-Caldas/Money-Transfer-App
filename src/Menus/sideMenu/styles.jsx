@@ -32,7 +32,7 @@ export const Container = styled.div`
   }
 
   header .info strong {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--title);
     margin: 19px 0 13px 0;
@@ -53,6 +53,11 @@ export const Container = styled.div`
     margin-bottom: 30px;
     font-size: 16px;
     color: var(--title);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--pink200);
+    }
   }
 
   ul li svg {
@@ -70,6 +75,12 @@ export const Container = styled.div`
     margin-bottom: 30px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--pink200);
+    }
   }
 
   /* =============================responsive======================================== */

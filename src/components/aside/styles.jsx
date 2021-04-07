@@ -15,16 +15,19 @@ export const Container = styled.div`
   header {
     display: flex;
     justify-content: flex-end;
+  }
 
-    button {
-      width: 54px;
-      height: 54px;
+  header button {
+    width: 54px;
+    height: 54px;
 
-      background: #ffffff;
-      box-shadow: 0px 2px 7px rgba(123, 135, 148, 0.28);
-      border-radius: 100%;
-      padding: 15px;
-      margin-left: 2rem;
+    background: #ffffff;
+    box-shadow: 0px 2px 7px rgba(123, 135, 148, 0.28);
+    border-radius: 100%;
+    padding: 15px;
+    margin-left: 2rem;
+    &:hover {
+      box-shadow: 0 0 5px 4px rgba(123, 135, 148, 0.28);
     }
 
     svg {
@@ -112,6 +115,9 @@ export const Container = styled.div`
     padding: 15px 0;
     font-size: 20px;
     font-weight: 500;
+    &:hover {
+      box-shadow: 0 0 1px 4px var(--pink100);
+    }
   }
 `;
 

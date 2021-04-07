@@ -1,9 +1,9 @@
 import Aside from "./components/aside";
 import Main from "./components/main/Main";
-import SideMenu from "./components/sideMenu";
+import SideMenu from "./Menus/sideMenu";
 import GlobalStyles from "./GlobalStyles";
-import Menu from "./utils/menu/Menu";
-import MenuTop from "./utils/menu/MenuTop/MenuTop";
+import Menu from "./Menus/MenuMobile/Menu";
+import MenuTop from "./Menus/MenuTop/MenuTop";
 
 function App() {
   return (

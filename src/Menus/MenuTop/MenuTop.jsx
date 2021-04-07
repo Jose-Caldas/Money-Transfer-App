@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrapper, Profile } from "./styles";
-import image from "../../../assets/avatar.png";
+import image from "../../assets/avatar.png";
 import {
   FiCreditCard,
   FiDatabase,
