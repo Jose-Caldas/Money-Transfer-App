@@ -10,7 +10,7 @@ import {
 } from "react-icons/fi";
 import { Wrapper } from "./styles";
 
-function Menu() {
+function MobileMenu() {
   return (
     <Wrapper>
       <input type="checkbox" name="" id="menu-hamburguer" />
@@ -67,4 +67,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default MobileMenu;

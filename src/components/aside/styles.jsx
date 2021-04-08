@@ -1,21 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 381px;
-  @media (min-width: 1015px) {
-    width: 100%;
-    padding: none;
-
-    h1 {
-      text-align: center;
-    }
-  }
+  width: 100%;
+  margin: 0 auto;
+  height: 80%;
 
   background-color: #fff;
 
   header {
     display: flex;
     justify-content: flex-end;
+    padding: 0 1rem;
   }
 
   header button {
@@ -43,38 +38,44 @@ export const Container = styled.div`
     line-height: 29px;
   }
 
+  .aside-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    width: 100%;
+    height: 100%;
+    margin: 2rem 0;
+    /* padding: 0 1rem; */
+  }
+
   .info {
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 350px;
     border: 2px solid #e4e7eb;
-    border-top: none;
+    /* border-top: none; */
     padding: 1rem;
-  }
-
-  @media (min-width: 1015px) {
-    .info {
-      padding: 40px;
-    }
+    border-radius: 4px;
   }
 
   .info-content {
     display: flex;
     justify-content: space-between;
+  }
 
-    svg {
-      color: #52606d;
-      width: 20px;
-      height: 20px;
-      margin-right: 15px;
-    }
+  svg {
+    color: #52606d;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
 
-    h3 {
-      font-size: 17px;
-      color: #3e4c59;
-      font-weight: 400;
-    }
+  h3 {
+    font-size: 17px;
+    color: #3e4c59;
+    font-weight: 400;
   }
 
   .content {
@@ -121,13 +122,29 @@ export const Container = styled.div`
     }
   }
 
-  /* .aside-container {
-      background: yellow;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    } */
+  @media (min-width: 1015px) {
+    max-width: 400px;
+    .aside-container {
+      grid-template-columns: 1fr;
+      grid-column-gap: none;
+      margin-bottom: 0;
+    }
+    .info {
+      padding: 40px;
+      border-top: none;
+    }
+  }
+  @media (max-width: 890px) {
+    .aside-container {
+      grid-template-columns: 1fr;
+      grid-column-gap: none;
+      margin-bottom: 0;
+    }
+    .info {
+      padding: 40px;
+      border-top: none;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -140,8 +157,8 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 220px;
-  margin-top: 4rem;
+  /* height: 300px; */
+  /* margin-top: 4rem; */
   padding: 2.5rem 1rem;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;

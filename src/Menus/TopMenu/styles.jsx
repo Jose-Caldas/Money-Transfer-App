@@ -5,11 +5,14 @@ export const Wrapper = styled.div`
 
   visibility: hidden;
 
+  margin: 0 auto;
+
   ul {
+    background: #446677;
     width: 100%;
 
     position: fixed;
-    top: 30px;
+    top: 0;
     left: 0;
 
     z-index: 10;
@@ -17,19 +20,20 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
   }
 
   li {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    color: #fff;
     padding: 20px;
   }
 
   li h1 {
     font-size: 16px;
-    color: var(--title);
+    color: #fff;
   }
 
   @media (max-width: 1024px) {
@@ -48,5 +52,6 @@ export const Profile = styled.div`
   .info {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 `;

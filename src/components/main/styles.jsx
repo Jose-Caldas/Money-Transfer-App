@@ -7,11 +7,52 @@ export const Container = styled.div`
   background: #fff;
   justify-content: space-between;
 
+  .profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: none;
+  }
+
+  header img {
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 20px;
+    position: absolute;
+  }
+
+  header .info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+  }
+
+  header .info strong {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--title);
+    margin: 19px 0 13px 0;
+  }
+
+  header .info small {
+    font-size: 16px;
+    color: var(--subTitle);
+    margin-bottom: 56px;
+  }
+
   @media (max-width: 1024px) {
     padding: 1rem;
     margin: 5rem 0;
+    margin: 5rem auto;
 
     header {
+    }
+  }
+
+  @media (max-width: 890px) {
+    .profile {
+      display: block;
     }
   }
 

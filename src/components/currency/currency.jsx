@@ -8,7 +8,9 @@ import { SelectContainer } from "./styled";
 import styled from "styled-components";
 
 const { Option } = Select;
-const StyledSelect = styled(Select)``;
+const StyledSelect = styled(Select)`
+  width: 100%;
+`;
 
 function Currency() {
   const [currencies] = useState(currenciesMock.currencies);
@@ -42,13 +44,11 @@ function Currency() {
             <input type="number"></input>
           </div>
         </div>
-        <div>
-          <button>
-            <FiRefreshCcw />
-          </button>
-        </div>
+        <button className="refresh">
+          <FiRefreshCcw />
+        </button>
         <div className="select">
-          <Select>
+          <StyledSelect>
             {currencies.map((currencies) => (
               <Option
                 style={{
@@ -67,7 +67,7 @@ function Currency() {
                 {currencies.label}
               </Option>
             ))}
-          </Select>
+          </StyledSelect>
           <div class="transfer-content">
             <small>Recipient gets</small>
             <input type="number"></input>

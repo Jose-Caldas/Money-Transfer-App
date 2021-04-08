@@ -19,27 +19,37 @@ export default createGlobalStyle`
 }
 
 *{
-    margin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
 
+
 .App{
   display:flex;
-  width:90%;
+  width:100%;
   max-width:1440px;
   max-height: 1024px;
   background: #fff;
   padding-top:2rem;
   margin:0 auto;
   flex:1 1 0;
+
+  h1{
+  margin:none;
+}
  
 
   
 }
 
 /* ==================================responsive============================ */
+
+@media(max-width:1280px){ 
+  padding: 3rem 1rem 0 1rem;
+  }
+
 
 @media(max-width:1024px){
 .App{
@@ -54,27 +64,23 @@ export default createGlobalStyle`
 }
 }
 
-.refresh{
-  display: flex;
-    align-items: flex-end;
-    padding-bottom:50px;
-  color:var(--pink200);
-  font-size:30px;
-}
+
 
 ul,
 li {
   list-style: none;
+  cursor:pointer;
 }
 input {
   outline: none;
+  background:none
 }
 
 button {
   border: none;
   outline: none;
   cursor: pointer;
-  /* background: none; */
+ 
  
  
  

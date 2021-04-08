@@ -6,11 +6,19 @@ import { DatePicker } from "antd";
 import Currency from "../currency/currency";
 import { CurrancyContainer } from "../currency/styled";
 import Plans from "../plans/Plans";
+import image from "../../assets/avatar.png";
 
 function Main() {
   return (
     <Container>
       <header>
+        <div className="profile">
+          <img src={image} alt="" srcset="" />
+          <div className="info">
+            <strong>José Caldas</strong>
+            <small>2312T45B</small>
+          </div>
+        </div>
         <h1>Send Money</h1>
         <div class="header-content">
           <h2>22,124</h2>

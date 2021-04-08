@@ -4,16 +4,20 @@ export const CurrancyContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: none;
 `;
 
 export const SelectContainer = styled.div`
+  flex: 1 1 0;
+
   .select {
+    width: 100%;
     justify-content: space-between;
     outline: none;
     border-radius: 10px;
   }
-  .select > div {
-    width: 267px;
+
+  
 
     margin-bottom: 20px;
   }
@@ -35,11 +39,13 @@ export const SelectContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 
   .transfer-content {
     background-color: #f5f7fa;
-    max-width: 267px;
+   
+    width: 100%;
     height: 128px;
     border: none;
     font-size: 30px;
@@ -49,19 +55,31 @@ export const SelectContainer = styled.div`
     border-radius: 8px;
     padding: 10px;
     margin-top: 20px;
+   
   }
 
-  .transfer button {
-    background-color: transparent;
+  .refresh {
     font-size: 30px;
+
+    background: transparent;
+    margin: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  .refresh svg {
     color: var(--pink200);
   }
 
   .transfer input {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     border: none;
-    background-color: #f5f7fa;
+    text-align:center;
+   
   }
 
   small {
@@ -80,12 +98,6 @@ export const SelectContainer = styled.div`
     .transfer-content {
       width: 100%;
     }
-    .select > div {
-      justify-content: center;
-    }
-    .transfer {
-      align-items: center;
-      /* justify-content: space-between; */
-    }
-  }
+   
+  
 `;
