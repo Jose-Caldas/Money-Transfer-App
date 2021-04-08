@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-// import "antd/dist/antd.css";
+import "antd/dist/antd.css";
 
 export default createGlobalStyle`
 :root {
@@ -31,7 +31,7 @@ export default createGlobalStyle`
   max-width:1440px;
   max-height: 1024px;
   background: #fff;
-  padding: 3rem 2rem 0 2rem;
+  padding-top:2rem;
   margin:0 auto;
   flex:1 1 0;
  

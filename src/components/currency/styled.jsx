@@ -9,11 +9,17 @@ export const CurrancyContainer = styled.div`
 export const SelectContainer = styled.div`
   .select {
     justify-content: space-between;
+    outline: none;
+    border-radius: 10px;
   }
   .select > div {
     width: 267px;
 
     margin-bottom: 20px;
+  }
+
+  .select span {
+    display: flex;
   }
 
   .select span img {
@@ -33,7 +39,7 @@ export const SelectContainer = styled.div`
 
   .transfer-content {
     background-color: #f5f7fa;
-    min-width: 267px;
+    max-width: 267px;
     height: 128px;
     border: none;
     font-size: 30px;
@@ -42,6 +48,7 @@ export const SelectContainer = styled.div`
     text-align: center;
     border-radius: 8px;
     padding: 10px;
+    margin-top: 20px;
   }
 
   .transfer button {

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media (min-width: 768px) {
+  max-width: 381px;
+  @media (min-width: 1015px) {
     width: 100%;
     padding: none;
 
@@ -52,7 +53,7 @@ export const Container = styled.div`
     padding: 1rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1015px) {
     .info {
       padding: 40px;
     }
@@ -119,10 +120,20 @@ export const Container = styled.div`
       box-shadow: 0 0 1px 4px var(--pink100);
     }
   }
+
+  /* .aside-container {
+      background: yellow;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    } */
 `;
 
 export const Wrapper = styled.div`
-  @media (min-width: 768px) {
+  display: flex;
+
+  @media (min-width: 1015px) {
     padding: 2.5rem;
   }
 

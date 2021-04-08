@@ -54,10 +54,21 @@ export const Container = styled.div`
     font-size: 16px;
     color: var(--title);
     cursor: pointer;
+    position: relative;
 
     &:hover {
       color: var(--pink200);
+      .item-select {
+        background: var(--pink200);
+      }
     }
+  }
+  .item-select {
+    width: 3px;
+    height: 40px;
+    background: transparent;
+    position: absolute;
+    left: -60px;
   }
 
   ul li svg {
@@ -65,10 +76,19 @@ export const Container = styled.div`
     height: 24px;
     margin-right: 19px;
   }
+
   footer {
     color: var(--title);
     margin-top: 70px;
     font-size: 16px;
+  }
+
+  .item-select-footer {
+    width: 3px;
+    height: 40px;
+    background: transparent;
+    position: absolute;
+    left: -60px;
   }
 
   footer li {
@@ -77,9 +97,11 @@ export const Container = styled.div`
     align-items: center;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--pink200);
+      .item-select-footer {
+        background: var(--pink200);
+      }
     }
   }
 

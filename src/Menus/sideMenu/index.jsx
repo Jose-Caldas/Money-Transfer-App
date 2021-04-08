@@ -24,24 +24,27 @@ function SideMenu() {
       <div className="navigation">
         <ul>
           <li>
-            <span>
-              <FiGrid />
-              Services
-            </span>
+            <div className="item-select"></div>
+            <FiGrid />
+            <span>Services</span>
           </li>
           <li>
+            <div className="item-select"></div>
             <FiRepeat />
             <span>Transactions</span>
           </li>
           <li>
+            <div className="item-select"></div>
             <FiShuffle style={{ color: "var(--pink200)" }} />
             <span style={{ color: "var(--pink200)" }}>Send Money</span>
           </li>
           <li>
+            <div className="item-select"></div>
             <FiCreditCard />
             <span>Cards</span>
           </li>
           <li>
+            <div className="item-select"></div>
             <FiDatabase />
             <span>History</span>
           </li>
@@ -50,10 +53,12 @@ function SideMenu() {
       <footer>
         <ul>
           <li>
+            <div className="item-select"></div>
             <FiSettings />
             <span>Settings</span>
           </li>
           <li>
+            <div className="item-select"></div>
             <FiLogOut />
             <span>Log Out</span>
           </li>

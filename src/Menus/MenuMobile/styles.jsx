@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 890px) {
     .menu {
       width: 60px;
       height: 60px;
