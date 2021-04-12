@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  width: 0;
-
-  visibility: hidden;
-
-  margin: 0 auto;
+export const Container = styled.div`
+  display: none;
 
   ul {
     background: #446677;
@@ -22,7 +18,6 @@ export const Wrapper = styled.div`
     justify-content: center;
     color: #fff;
   }
-
   li {
     display: flex;
     flex-direction: column;
@@ -36,14 +31,13 @@ export const Wrapper = styled.div`
     color: #fff;
   }
 
-  @media (max-width: 1024px) {
-    visibility: visible;
+  @media (max-width: 1200px) {
+    display: block;
   }
   @media (max-width: 890px) {
     visibility: hidden;
   }
 `;
-
 export const Profile = styled.div`
   display: flex;
   flex-direction: column;

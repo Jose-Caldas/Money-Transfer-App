@@ -1,25 +1,21 @@
 import React, { useState } from "react";
-import { FiRefreshCcw } from "react-icons/fi";
+import { Container } from "./styled";
 
+import { FiRefreshCcw } from "react-icons/fi";
 import { Select } from "antd";
 
 import currenciesMock from "../../mocks/currencies.json";
-import { SelectContainer } from "./styled";
-import styled from "styled-components";
 
 const { Option } = Select;
-const StyledSelect = styled(Select)`
-  width: 100%;
-`;
 
 function Currency() {
   const [currencies] = useState(currenciesMock.currencies);
-  console.log(currencies);
+
   return (
-    <SelectContainer>
-      <div className="transfer">
+    <Container>
+      <div className="currency-select">
         <div className="select">
-          <StyledSelect>
+          <Select>
             {currencies.map((currencies) => (
               <Option
                 style={{
@@ -38,8 +34,8 @@ function Currency() {
                 {currencies.label}
               </Option>
             ))}
-          </StyledSelect>
-          <div class="transfer-content">
+          </Select>
+          <div class="transfer">
             <small>You send</small>
             <input type="number"></input>
           </div>
@@ -48,7 +44,7 @@ function Currency() {
           <FiRefreshCcw />
         </button>
         <div className="select">
-          <StyledSelect>
+          <Select>
             {currencies.map((currencies) => (
               <Option
                 style={{
@@ -57,7 +53,7 @@ function Currency() {
                 value={currencies.value}
                 id={currencies.id}
               >
-                To:
+                From:
                 <img
                   src={currencies.flag}
                   alt=""
@@ -67,14 +63,14 @@ function Currency() {
                 {currencies.label}
               </Option>
             ))}
-          </StyledSelect>
-          <div class="transfer-content">
+          </Select>
+          <div class="transfer">
             <small>Recipient gets</small>
             <input type="number"></input>
           </div>
         </div>
       </div>
-    </SelectContainer>
+    </Container>
   );
 }
 

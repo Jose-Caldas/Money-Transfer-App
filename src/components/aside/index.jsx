@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Wrapper } from "./styled";
 import {
   FiArrowRight,
   FiCalendar,
@@ -7,7 +8,7 @@ import {
   FiHelpCircle,
   FiShuffle,
 } from "react-icons/fi";
-import { Container, Wrapper } from "./styles";
+
 import image from "../../assets/brazil.png";
 import image2 from "../../assets/germany.png";
 
@@ -15,7 +16,7 @@ function Aside() {
   return (
     <Container>
       <header>
-        <button className="button-top">
+        <button>
           <FiFileText />
         </button>
         <button>

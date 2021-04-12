@@ -1,4 +1,6 @@
 import React from "react";
+import { Container } from "./styled";
+
 import {
   FiCreditCard,
   FiDatabase,
@@ -8,11 +10,10 @@ import {
   FiSettings,
   FiShuffle,
 } from "react-icons/fi";
-import { Wrapper } from "./styles";
 
 function MobileMenu() {
   return (
-    <Wrapper>
+    <Container>
       <input type="checkbox" name="" id="menu-hamburguer" />
       <label for="menu-hamburguer">
         <div class="menu">
@@ -63,7 +64,7 @@ function MobileMenu() {
           </a>
         </li>
       </ul>
-    </Wrapper>
+    </Container>
   );
 }
 

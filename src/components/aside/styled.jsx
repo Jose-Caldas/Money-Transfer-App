@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  min-width: 360px;
   margin: 0 auto;
-  height: 80%;
+  height: 80vh;
+  padding-left: 21px;
 
   background-color: #fff;
 
@@ -44,8 +45,7 @@ export const Container = styled.div`
     grid-column-gap: 40px;
     width: 100%;
     height: 100%;
-    margin: 2rem 0;
-    /* padding: 0 1rem; */
+    margin: 4rem 0;
   }
 
   .info {
@@ -55,7 +55,6 @@ export const Container = styled.div`
     justify-content: space-between;
     height: 350px;
     border: 2px solid #e4e7eb;
-    /* border-top: none; */
     padding: 1rem;
     border-radius: 4px;
   }
@@ -122,8 +121,8 @@ export const Container = styled.div`
     }
   }
 
-  @media (min-width: 1015px) {
-    max-width: 400px;
+  @media (min-width: 1200px) {
+    width: 350px;
     .aside-container {
       grid-template-columns: 1fr;
       grid-column-gap: none;
@@ -150,15 +149,14 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
 
-  @media (min-width: 1015px) {
+  @media (min-width: 1200px) {
     padding: 2.5rem;
   }
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* height: 300px; */
-  /* margin-top: 4rem; */
+
   padding: 2.5rem 1rem;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;

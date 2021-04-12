@@ -1,6 +1,6 @@
 import React from "react";
-import { Wrapper, Profile } from "./styles";
-import image from "../../assets/avatar.png";
+import { Container, Profile } from "./styled";
+import image from "../../../assets/avatar.png";
 import {
   FiCreditCard,
   FiDatabase,
@@ -11,9 +11,9 @@ import {
   FiShuffle,
 } from "react-icons/fi";
 
-function MenuTop() {
+function TopMenu() {
   return (
-    <Wrapper>
+    <Container>
       <ul>
         <Profile>
           <img src={image} alt="" srcset="" />
@@ -51,8 +51,8 @@ function MenuTop() {
           <h1> Log Out</h1>
         </li>
       </ul>
-    </Wrapper>
+    </Container>
   );
 }
 
-export default MenuTop;
+export default TopMenu;
