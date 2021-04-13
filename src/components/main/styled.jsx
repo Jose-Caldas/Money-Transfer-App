@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   h1 {
     font-size: 30px;
-    color: var(--title);
+    color: ${(props) => props.theme.title};
     font-weight: 500;
     margin-bottom: 14px;
   }
@@ -36,7 +36,7 @@ export const Container = styled.div`
     }
 
     h3 {
-      color: var(--subTitle);
+      color: ${(props) => props.theme.small};
       font-weight: 400;
       font-size: 16px;
       margin-bottom: 7px;
@@ -52,12 +52,12 @@ export const ChoosePlan = styled.div`
 
   h1 {
     font-size: 24px;
-    color: var(--title);
+    color: ${(props) => props.theme.title};
     font-weight: 500;
     margin: 0;
   }
   h4 {
-    color: var(--title);
+    color: ${(props) => props.theme.title};
     font-size: 18px;
     font-weight: 400;
     margin-right: 10px;

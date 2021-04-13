@@ -1,0 +1,33 @@
+export const lightTheme = {
+  body: "#fff",
+  fontColor: "#000",
+  bgbutton: "orangered",
+  colorButton: "#fff",
+  title: "#1F2933 ",
+  bg: "#fff",
+  li: "#3E4C59",
+  small: "#616E7C",
+  h2: "#3e4c59",
+  asideh3: "#3e4c59",
+  svg: "#1F2933",
+  checkbox: "#fff",
+  text: "Dark",
+  themeIcon: "#fff",
+};
+
+export const darkTheme = {
+  body: "#333",
+  fontColor: "#999999",
+  bgbutton: "#d0d066",
+  colorButton: "#333",
+  title: "#999999",
+  bg: "#333",
+  li: "#fff",
+  small: "#fff",
+  h2: "#999999",
+  asideh3: "#fff",
+  svg: "#1F2933",
+  checkbox: "#fff",
+  text: "Light",
+  themeIcon: "#333",
+};

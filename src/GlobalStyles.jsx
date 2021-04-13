@@ -24,10 +24,8 @@ h3{
 }
 
 
-body{
-    background-color:#fff;
-  
-}
+
+
 
 :root{
 
@@ -48,5 +46,25 @@ body{
  --blue100:#8f83d1;
     
 }
+
+body{
+    background-color: ${(props) => props.theme.body};
+    h1{
+        color: ${(props) => props.theme.fontColor}
+    }
+}
+    button{
+        background-color: ${(props) => props.theme.bgbutton};
+        color: ${(props) => props.theme.colorButton};
+
+        
+    }
+    
+    
+  
+
+    strong{
+        color:${(props) => props.theme.title}
+    }
 
 `;

@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 80vh;
   padding-left: 21px;
 
-  background-color: #fff;
+  background-color: ${(props) => props.theme.bg};
 
   header {
     display: flex;
@@ -37,6 +37,7 @@ export const Container = styled.div`
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    margin-bottom: 20px;
   }
 
   .aside-container {
@@ -65,7 +66,7 @@ export const Container = styled.div`
   }
 
   svg {
-    color: #52606d;
+    color: ${(props) => props.theme.svg};
     width: 20px;
     height: 20px;
     margin-right: 15px;
@@ -73,7 +74,7 @@ export const Container = styled.div`
 
   h3 {
     font-size: 17px;
-    color: #3e4c59;
+    color: ${(props) => props.theme.asideh3};
     font-weight: 400;
   }
 
@@ -85,6 +86,8 @@ export const Container = styled.div`
     h2 {
       font-size: 18px;
       margin-bottom: 10px;
+      color: ${(props) => props.theme.title};
+      margin: 0;
     }
     img {
       margin-right: 1rem;
@@ -101,12 +104,16 @@ export const Container = styled.div`
 
   .info-content > div {
     display: flex;
-    color: #3e4c59;
+    color: ${(props) => props.theme.li};
     align-items: center;
+
+    svg {
+      color: ${(props) => props.theme.li};
+    }
   }
   strong {
     font-size: 18px;
-    color: var(--title);
+    color: ${(props) => props.theme.title};
     font-weight: 600;
   }
   button {

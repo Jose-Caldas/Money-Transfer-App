@@ -35,13 +35,15 @@ export const Header = styled.div`
     strong {
       font-size: 24px;
       font-weight: 600;
-      color: var(--title);
+
+      color: ${(props) => props.theme.title};
+
       margin: 19px 0 13px 0;
     }
 
     small {
-      font-size: 16px;
-      color: var(--subTitle);
+      font-size: 14px;
+      color: ${(props) => props.theme.small};
       margin-bottom: 56px;
     }
   }
@@ -58,7 +60,7 @@ export const Navigation = styled.div`
     align-items: center;
     margin-bottom: 30px;
     font-size: 16px;
-    color: var(--title);
+    color: ${(props) => props.theme.li};
     cursor: pointer;
     position: relative;
 

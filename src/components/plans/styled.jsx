@@ -32,13 +32,13 @@ export const Button = styled.button`
 
   h2 {
     font-size: 18px;
-    color: #3e4c59;
+    color: ${(props) => props.theme.h2};
     font-weight: 500;
   }
 
   small {
     font-size: 14px;
-    color: #616e7c;
+    color: ${(props) => props.theme.small};
   }
 
   span {
@@ -64,7 +64,8 @@ export const Button = styled.button`
   .checkbox svg {
     width: 20px;
     height: 20px;
-    color: white;
+    background-color: ${(props) => props.theme.checkbox};
+    color: ${(props) => props.theme.checkbox};
     margin-right: 20px;
     border: 1px solid gray;
     border-radius: 50%;

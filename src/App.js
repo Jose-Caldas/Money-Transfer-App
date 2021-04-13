@@ -6,16 +6,34 @@ import SideMenu from "./components/menus/SideMenu";
 import TopMenu from "./components/menus/TopMenu";
 import { GlobaStyles } from "./GlobalStyles";
 
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./Theme/Theme";
+import image from "./assets/theme-light-dark.png";
+
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
   return (
     <div className="App">
-      <SideMenu />
-      <TopMenu />
-      <MobileMenu />
-      <Main />
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <button className="darkMode" onClick={themeToggler}>
+          <img src={image} alt="" srcset="" />
+          Swap Theme
+        </button>
 
-      <Aside />
-      <GlobaStyles />
+        <SideMenu />
+        <TopMenu />
+        <MobileMenu />
+        <Main />
+
+        <Aside />
+        <GlobaStyles />
+      </ThemeProvider>
     </div>
   );
 }

@@ -83,6 +83,7 @@ export const Container = styled.div`
     text-align: center;
     background-color: #f5f7fa;
     outline: none;
+    color: ${(props) => props.theme.title};
 
     &:hover,
     &:focus {
