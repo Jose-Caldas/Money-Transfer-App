@@ -49,6 +49,7 @@ h3{
 
 body{
     background-color: ${(props) => props.theme.body};
+  
     h1{
         color: ${(props) => props.theme.fontColor}
     }

@@ -42,7 +42,7 @@ export const Button = styled.button`
   }
 
   span {
-    color: var(-title);
+    color: ${(props) => props.theme.title};
     font-size: 18px;
     font-weight: 600;
   }

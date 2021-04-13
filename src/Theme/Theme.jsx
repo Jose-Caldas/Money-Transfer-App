@@ -16,12 +16,12 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  body: "#333",
+  body: "#282c36",
   fontColor: "#999999",
   bgbutton: "#d0d066",
   colorButton: "#333",
   title: "#999999",
-  bg: "#333",
+  bg: "#282c36",
   li: "#fff",
   small: "#fff",
   h2: "#999999",
