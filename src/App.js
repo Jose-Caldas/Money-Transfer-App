@@ -21,9 +21,9 @@ function App() {
 
   const icon =
     theme === "light" ? (
-      <FiSun size={40} color="orangered" />
+      <FiSun size={35} color="orangered" />
     ) : (
-      <FiMoon size={40} color="#d0d066" />
+      <FiMoon size={35} color="#d0d066" />
     );
 
   return (

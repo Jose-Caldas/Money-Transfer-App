@@ -13,6 +13,7 @@ export const lightTheme = {
   checkbox: "#fff",
   text: "Dark",
   themeIcon: "#fff",
+  planSmall: "#616E7C",
 };
 
 export const darkTheme = {
@@ -30,4 +31,5 @@ export const darkTheme = {
   checkbox: "#fff",
   text: "Light",
   themeIcon: "#333",
+  planSmall: "#1F2933",
 };

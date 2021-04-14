@@ -12,13 +12,15 @@ export const Container = styled.div`
   }
 
   @media (max-width: 1200px) {
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-bottom: 5rem;
     padding: 0 21px;
+    margin: 4rem auto;
+    width: 100%;
   }
 
   @media (max-width: 768px) {
-    margin-top: 15rem;
+    margin-top: 10rem;
   }
 
   header {

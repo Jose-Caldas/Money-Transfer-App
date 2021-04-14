@@ -33,6 +33,7 @@ export const Container = styled.div`
 
   @media (max-width: 1200px) {
     display: block;
+    margin-bottom: 5rem;
   }
   @media (max-width: 890px) {
     visibility: hidden;

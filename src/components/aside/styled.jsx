@@ -1,12 +1,25 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-width: 360px;
-  margin: 0 auto;
-  height: 80vh;
-  padding-left: 21px;
+  min-width: 381px;
+  padding-left: 49px;
 
   background-color: ${(props) => props.theme.bg};
+  @media (max-width: 1200px) {
+ 
+    padding-left:0;
+    padding:21px;
+    
+   .aside-container{
+    max-width:600px;
+    margin:4rem auto;
+   
+    
+
+    
+    }
+   }
+  }
 
   header {
     display: flex;
@@ -41,12 +54,14 @@ export const Container = styled.div`
   }
 
   .aside-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
     width: 100%;
     height: 100%;
-    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    
+   
   }
 
   .info {
@@ -57,7 +72,9 @@ export const Container = styled.div`
     height: 350px;
     border: 2px solid #e4e7eb;
     padding: 1rem;
-    border-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: none;
   }
 
   .info-content {
@@ -128,23 +145,9 @@ export const Container = styled.div`
     }
   }
 
-  @media (min-width: 1200px) {
-    width: 350px;
-    .aside-container {
-      grid-template-columns: 1fr;
-      grid-column-gap: none;
-      margin-bottom: 0;
-    }
-    .info {
-      padding: 40px;
-      border-top: none;
-    }
-  }
+ 
   @media (max-width: 890px) {
     .aside-container {
-      grid-template-columns: 1fr;
-      grid-column-gap: none;
-      margin-bottom: 0;
     }
     .info {
       padding: 40px;

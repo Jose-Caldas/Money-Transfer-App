@@ -66,6 +66,7 @@ export const Container = styled.div`
     height: 50px;
     border: none;
     margin: 80px auto;
+    cursor: pointer;
   }
 
   .refresh svg {

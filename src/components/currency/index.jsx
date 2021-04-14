@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "./styled";
 
 import { FiRefreshCcw } from "react-icons/fi";
 import { Select } from "antd";
 
-import currenciesMock from "../../mocks/currencies.json";
+// import currenciesMock from "../../mocks/currencies.json";
 
 const { Option } = Select;
 
 function Currency() {
-  const [currencies] = useState(currenciesMock.currencies);
+  const [currencies, setCurrencies] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://my-json-server.typicode.com/juliomerisio/currency-json-server/currencies"
+    )
+      .then((response) => response.json())
+      .then((data) => setCurrencies(data));
+  }, []);
 
   return (
     <Container>
@@ -53,7 +61,7 @@ function Currency() {
                 value={currencies.value}
                 id={currencies.id}
               >
-                From:
+                To:
                 <img
                   src={currencies.flag}
                   alt=""

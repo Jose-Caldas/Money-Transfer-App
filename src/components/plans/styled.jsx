@@ -38,7 +38,7 @@ export const Button = styled.button`
 
   small {
     font-size: 14px;
-    color: ${(props) => props.theme.small};
+    color: ${(props) => props.theme.planSmall};
   }
 
   span {
