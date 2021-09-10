@@ -1,6 +1,6 @@
 import { DatePicker } from "antd";
 import React from "react";
-import Currency from "../currency";
+import Currency from "../Currency";
 import Plans from "../Plans";
 import { Container, ChoosePlan } from "./styled";
 

@@ -1,6 +1,6 @@
 import "../src/App.css";
 import Aside from "./components/Aside";
-import Main from "./components/main";
+import Main from "./components/Main";
 import MobileMenu from "./components/menus/mobileMenu";
 import SideMenu from "./components/menus/SideMenu";
 import TopMenu from "./components/menus/TopMenu";

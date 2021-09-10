@@ -29,7 +29,7 @@ function Aside() {
           <div className="content">
             <div>
               <h2>22,124</h2>
-              <img src={image} alt="" srcset="" />
+              <img src={image} alt="" />
               BRL
             </div>
             <div>
@@ -38,7 +38,7 @@ function Aside() {
 
             <div>
               <h2>4,124</h2>
-              <img src={image2} alt="" srcset="" />
+              <img src={image2} alt="" />
               EUR
             </div>
           </div>

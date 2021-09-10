@@ -16,7 +16,7 @@ function TopMenu() {
     <Container>
       <ul>
         <Profile>
-          <img src={image} alt="" srcset="" />
+          <img src={image} alt="" />
           <div className="info">
             <strong>John Doe</strong>
             <small>2312T45B</small>

@@ -11,7 +11,7 @@ function Plans({ title, text, number }) {
         <FaCheckCircle />
       </div>
       <div className="center">
-        <div class="options">
+        <div className="options">
           <h2>{title}</h2>
           <small>{text}</small>
         </div>

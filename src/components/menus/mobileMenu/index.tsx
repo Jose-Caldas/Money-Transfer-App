@@ -15,9 +15,9 @@ function MobileMenu() {
   return (
     <Container>
       <input type="checkbox" name="" id="menu-hamburguer" />
-      <label for="menu-hamburguer">
-        <div class="menu">
-          <span class="hamburguer"></span>
+      <label htmlFor="menu-hamburguer">
+        <div className="menu">
+          <span className="hamburguer"></span>
         </div>
       </label>
       <ul>

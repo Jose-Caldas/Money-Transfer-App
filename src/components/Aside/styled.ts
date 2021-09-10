@@ -18,7 +18,7 @@ export const Container = styled.div`
 
     
     }
-   }
+   
   }
 
   header {
