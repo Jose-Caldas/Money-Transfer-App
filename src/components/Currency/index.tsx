@@ -7,17 +7,21 @@ import { Select } from "antd";
 
 // import currenciesMock from "../../mocks/currencies.json";
 
-export type CurrencyProps = {
+export type Currency = {
   label: string;
   id: string;
   value: string;
   flag: string;
 };
 
+export interface CurrencyProps {
+  currencies: Currency[];
+}
+
 const { Option } = Select;
 
 function Currency() {
-  const [currencies, setCurrencies] = useState([]);
+  const [currencies, setCurrencies] = useState<Currency[]>([]);
 
   const API_BASE_URL =
     "https://run.mocky.io/v3/87a9b305-789c-4fa8-8b1f-f38ecfbf8534";
