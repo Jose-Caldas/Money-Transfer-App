@@ -50,8 +50,6 @@ export const ChoosePlan = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 1rem;
-
   h1 {
     font-size: 24px;
     color: ${(props) => props.theme.title};
@@ -88,4 +86,9 @@ export const ChoosePlan = styled.div`
       margin-bottom: 2rem;
     }
   }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

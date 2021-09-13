@@ -1,178 +1,239 @@
-{
-  "currencies": [
+
+   
+   [
     {
       "label": "Canada",
       "id": "CAD",
       "value": "CAD",
-      "flag": "https://www.countryflags.io/ca/flat/64.png"
+      "flag": "https://www.countryflags.io/ca/flat/64.png",
+      "rate": 1.5898,
+      "symbol": "$"
     },
     {
       "label": "Hong Kong",
       "id": "HKD",
       "value": "HKD",
-      "flag": "https://www.countryflags.io/hk/flat/64.png"
+      "flag": "https://www.countryflags.io/hk/flat/64.png",
+      "rate": 9.1825,
+      "symbol": "$"
     },
     {
       "label": "Philippines",
       "id": "PHP",
       "value": "PHP",
-      "flag": "https://www.countryflags.io/ph/flat/64.png"
+      "flag": "https://www.countryflags.io/ph/flat/64.png",
+      "rate": 58.124,
+      "symbol": "₱"
     },
     {
       "label": "Denmark",
       "id": "DKK",
       "value": "DKK",
-      "flag": "https://www.countryflags.io/dk/flat/64.png"
+      "flag": "https://www.countryflags.io/dk/flat/64.png",
+      "rate": 7.4442,
+      "symbol": "Kr"
     },
     {
       "label": "Hungary",
       "id": "HUF",
       "value": "HUF",
-      "flag": "https://www.countryflags.io/hu/flat/64.png"
+      "flag": "https://www.countryflags.io/hu/flat/64.png",
+      "rate": 344.95,
+      "symbol": "Ft"
+
     },
     {
       "label": "Czech Republic",
       "id": "CZK",
       "value": "CZK",
-      "flag": "https://www.countryflags.io/cz/flat/64.png"
+      "flag": "https://www.countryflags.io/cz/flat/64.png",
+      "rate": 26.175,
+      "symbol": "Kč"
     },
     {
       "label": "Australia",
       "id": "AUD",
       "value": "AUD",
-      "flag": "https://www.countryflags.io/au/flat/64.png"
+      "flag": "https://www.countryflags.io/au/flat/64.png",
+      "rate": 1.6488,
+      "symbol": "L"
     },
     {
-      "label": "RON",
-      "id": "Romania",
-      "value": "Romania",
-      "flag": "https://www.countryflags.io/ro/flat/64.png"
+      "label": "Romania",
+      "id": "RON",
+      "value": "RON",
+      "flag": "https://www.countryflags.io/ro/flat/64.png",
+      "rate": 4.8315,
+      "symbol": "Kr"
     },
     {
       "label": "Sweden",
       "id": "SEK",
       "value": "SEK",
-      "flag": "https://www.countryflags.io/se/flat/64.png"
+      "flag": "https://www.countryflags.io/se/flat/64.png",
+      "rate": 10.2835,
+      "symbol": "Kr"
     },
     {
       "label": "Indonesia",
       "id": "IDR",
       "value": "IDR",
-      "flag": "https://www.countryflags.io/id/flat/64.png"
+      "flag": "https://www.countryflags.io/id/flat/64.png",
+      "rate": 17364.0,
+      "symbol": "Rp"
     },
     {
       "label": "India",
       "id": "INR",
       "value": "INR",
-      "flag": "https://www.countryflags.io/in/flat/64.png"
+      "flag": "https://www.countryflags.io/in/flat/64.png",
+      "rate": 88.6355,
+      "symbol": "₹"
     },
     {
       "label": "Brazil",
       "id": "BRL",
       "value": "BRL",
-      "flag": "https://www.countryflags.io/br/flat/64.png"
+      "flag": "https://www.countryflags.io/br/flat/64.png",
+      "rate": 6.1219,
+      "symbol": "R$"
     },
     {
       "label": "Russian Federation",
       "id": "RUB",
       "value": "RUB",
-      "flag": "https://www.countryflags.io/ru/flat/64.png"
+      "flag": "https://www.countryflags.io/ru/flat/64.png",
+      "rate": 87.69,
+      "symbol": "R"
     },
     {
       "label": "Croatia",
       "id": "HRK",
       "value": "HRK",
-      "flag": "https://www.countryflags.io/hr/flat/64.png"
+      "flag": "https://www.countryflags.io/hr/flat/64.png",
+      "rate": 7.4815,
+      "symbol": "Kn"
     },
     {
       "label": "Japan",
       "id": "JPY",
       "value": "JPY",
-      "flag": "https://www.countryflags.io/jp/flat/64.png"
+      "flag": "https://www.countryflags.io/jp/flat/64.png",
+      "rate": 124.31,
+      "symbol": "¥"
     },
     {
       "label": "Thailand",
       "id": "THB",
       "value": "THB",
-      "flag": "https://www.countryflags.io/th/flat/64.png"
+      "flag": "https://www.countryflags.io/th/flat/64.png",
+      "rate": 36.948,
+      "symbol": "฿"
     },
     {
       "label": "Switzerland",
       "id": "CHF",
       "value": "CHF",
-      "flag": "https://www.countryflags.io/ch/flat/64.png"
+      "flag": "https://www.countryflags.io/ch/flat/64.png",
+      "rate": 1.0769,
+      "symbol": "Fr"
     },
     {
       "label": "Singapore",
       "id": "SGD",
       "value": "SGD",
-      "flag": "https://www.countryflags.io/sg/flat/64.png"
+      "flag": "https://www.countryflags.io/sg/flat/64.png",
+      "rate": 1.6245,
+      "symbol": "$"
     },
     {
       "label": "Poland",
       "id": "PLN",
       "value": "PLN",
-      "flag": "https://www.countryflags.io/pl/flat/64.png"
+      "flag": "https://www.countryflags.io/pl/flat/64.png",
+      "rate": 4.4034,
+      "symbol": "zł"
     },
     {
       "label": "Bulgaria",
       "id": "BGN",
       "value": "BGN",
-      "flag": "https://www.countryflags.io/bg/flat/64.png"
+      "flag": "https://www.countryflags.io/bg/flat/64.png",
+      "rate": 1.9558,
+      "symbol": "$"
     },
     {
       "label": "Turkey",
       "id": "TRY",
       "value": "TRY",
-      "flag": "https://www.countryflags.io/tr/flat/64.png"
+      "flag": "https://www.countryflags.io/tr/flat/64.png",
+      "rate": 8.2595,
+      "symbol": "лв."
     },
     {
       "label": "China",
       "id": "CNY",
       "value": "CNY",
-      "flag": "https://www.countryflags.io/cn/flat/64.png"
+      "flag": "https://www.countryflags.io/cn/flat/64.png",
+      "rate": 8.2637,
+      "symbol": "¥"
     },
     {
       "label": "New Zealand",
       "id": "NZD",
       "value": "NZD",
-      "flag": "https://www.countryflags.io/nz/flat/64.png"
+      "flag": "https://www.countryflags.io/nz/flat/64.png",
+      "rate": 1.7771,
+      "symbol": "$"
     },
     {
       "label": "South Africa",
       "id": "ZAR",
       "value": "ZAR",
-      "flag": "https://www.countryflags.io/za/flat/64.png"
+      "flag": "https://www.countryflags.io/za/flat/64.png",
+      "rate": 20.096,
+      "symbol": "R"
     },
     {
       "label": "United States",
       "id": "USD",
       "value": "USD",
-      "flag": "https://www.countryflags.io/us/flat/64.png"
+      "flag": "https://www.countryflags.io/us/flat/64.png",
+      "rate": 1.1848,
+      "symbol": "$"
     },
     {
       "label": "Mexico",
       "id": "MXN",
       "value": "MXN",
-      "flag": "https://www.countryflags.io/mx/flat/64.png"
+      "flag": "https://www.countryflags.io/mx/flat/64.png",
+      "rate": 26.278,
+      "symbol": "$"
     },
     {
       "label": "Israel",
       "id": "ILS",
       "value": "ILS",
-      "flag": "https://www.countryflags.io/il/flat/64.png"
+      "flag": "https://www.countryflags.io/il/flat/64.png",
+      "rate": 4.0312,
+      "symbol": "₪"
     },
     {
       "label": "United Kingdom",
       "id": "GBP",
       "value": "GBP",
-      "flag": "https://www.countryflags.io/gb/flat/64.png"
+      "flag": "https://www.countryflags.io/gb/flat/64.png",
+      "rate": 0.90053,
+      "symbol": "£"
     },
     {
       "label": "European Union",
       "id": "EUR",
       "value": "EUR",
-      "flag": "https://www.countryflags.io/eu/flat/64.png"
-    }
+      "flag": "https://www.countryflags.io/eu/flat/64.png",
+      "rate": 1.1781,
+      "symbol": "€"
+    }   
   ]
-}
+  
+

@@ -1,4 +1,4 @@
-export const lightTheme = {
+export default {
   body: "#fff",
   fontColor: "#000",
   bgbutton: "orangered",
@@ -14,22 +14,4 @@ export const lightTheme = {
   text: "Dark",
   themeIcon: "#fff",
   planSmall: "#616E7C",
-};
-
-export const darkTheme = {
-  body: "#282c36",
-  fontColor: "#999999",
-  bgbutton: "#d0d066",
-  colorButton: "#333",
-  title: "#999999",
-  bg: "#282c36",
-  li: "#fff",
-  small: "#fff",
-  h2: "#999999",
-  asideh3: "#fff",
-  svg: "#1F2933",
-  checkbox: "#fff",
-  text: "Light",
-  themeIcon: "#333",
-  planSmall: "#1F2933",
-};
+} as const;

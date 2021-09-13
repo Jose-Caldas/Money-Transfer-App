@@ -44,19 +44,22 @@ h3{
  --gray400:#E4E7EB;
 
  --blue100:#8f83d1;
+
+ --darksvg: #1f2933;
     
 }
 
 body{
-    background-color: ${(props) => props.theme.body};
+    background-color: ${(props) => props.theme.bg};
+   
   
     h1{
-        color: ${(props) => props.theme.fontColor}
+        color: var(---title)
     }
 }
     button{
-        background-color: ${(props) => props.theme.bgbutton};
-        color: ${(props) => props.theme.colorButton};
+        background-color: orangered;
+        color: var(---white);
 
         
     }
@@ -65,7 +68,7 @@ body{
   
 
     strong{
-        color:${(props) => props.theme.title}
+        color: var(--title)
     }
 
 `;

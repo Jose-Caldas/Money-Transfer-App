@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Wrapper } from "./styled";
 import {
   FiArrowRight,

@@ -2,7 +2,7 @@ import { DatePicker } from "antd";
 import React from "react";
 import Currency from "../Currency";
 import Plans from "../Plans";
-import { Container, ChoosePlan } from "./styled";
+import { Container, ChoosePlan, Content } from "./styled";
 
 function Main() {
   return (
@@ -12,7 +12,9 @@ function Main() {
         <h2>22,124</h2>
         <h3>available</h3>
       </header>
-      <Currency />
+      <Content>
+        <Currency />
+      </Content>
 
       <ChoosePlan>
         <h1>Choose a plan:</h1>

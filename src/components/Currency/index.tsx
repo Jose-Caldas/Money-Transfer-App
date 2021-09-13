@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container } from "./styled";
 import axios from "axios";
 
 import { FiRefreshCcw } from "react-icons/fi";
 import { Select } from "antd";
 
-// import currenciesMock from "../../mocks/currencies.json";
+import mockrates from "../../mocks/rates.json";
 
 export type Currency = {
   label: string;
@@ -20,7 +20,7 @@ export interface CurrencyProps {
 
 const { Option } = Select;
 
-function Currency() {
+function Currencies() {
   const [currencies, setCurrencies] = useState<Currency[]>([]);
 
   const API_BASE_URL =
@@ -31,6 +31,17 @@ function Currency() {
     const { currencies } = await res.data;
     setCurrencies(currencies);
   };
+
+  const { convert } = require("cashify");
+
+  const base = "EUR";
+
+  const rates = mockrates;
+  console.log(rates.BRL.toFixed(2));
+
+  const result = convert(10, { from: "EUR", to: "GBP", base, rates });
+
+  console.log(result);
 
   useEffect(() => {
     fetchCurrencies();
@@ -47,8 +58,9 @@ function Currency() {
                   fontSize: 15,
                 }}
                 key={currency.id}
-                value={currency.value}
+                value={currency.label}
                 id={currency.id}
+                flag={currency.flag}
               >
                 From:
                 <img
@@ -62,7 +74,7 @@ function Currency() {
           </Select>
           <div className="transfer">
             <small>You send</small>
-            <input type="number"></input>
+            <input type="number" min={1}></input>
           </div>
         </div>
         <button className="refresh">
@@ -91,7 +103,8 @@ function Currency() {
           </Select>
           <div className="transfer">
             <small>Recipient gets</small>
-            <input type="number"></input>
+
+            <input type="number" min={1}></input>
           </div>
         </div>
       </div>
@@ -99,4 +112,4 @@ function Currency() {
   );
 }
 
-export default Currency;
+export default Currencies;

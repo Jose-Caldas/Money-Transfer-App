@@ -90,6 +90,8 @@ export const Navigation = styled.div`
     color: var(--title);
     margin-top: 70px;
     font-size: 16px;
+    display: flex;
+    width: 100%;
   }
 
   .item-select-footer {

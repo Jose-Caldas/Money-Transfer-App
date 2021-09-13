@@ -22,43 +22,43 @@ function MobileMenu() {
       </label>
       <ul>
         <li>
-          <a href="#app">
+          <a href="/">
             <FiGrid />
             Services
           </a>
         </li>
         <li>
-          <a href="#app">
+          <a href="/">
             <FiRepeat />
             Transactions
           </a>
         </li>
         <li>
-          <a href="#app">
+          <a href="/">
             <FiShuffle />
             Send Money
           </a>
         </li>
         <li>
-          <a href="#app">
+          <a href="/">
             <FiCreditCard />
             Cards
           </a>
         </li>
         <li>
-          <a href="#app">
+          <a href="/">
             <FiDatabase />
             History
           </a>
         </li>
         <li>
-          <a href="#app">
+          <a href="/">
             <FiSettings />
             Settings
           </a>
         </li>
         <li>
-          <a href="#app">
+          <a href="/">
             <FiLogOut />
             Log Out
           </a>

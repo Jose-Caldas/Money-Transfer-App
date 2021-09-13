@@ -4,21 +4,15 @@ export const Container = styled.div`
   min-width: 381px;
   padding-left: 49px;
 
-  background-color: ${(props) => props.theme.bg};
+  background-color: var(--white);
   @media (max-width: 1200px) {
- 
-    padding-left:0;
-    padding:21px;
-    
-   .aside-container{
-    max-width:600px;
-    margin:4rem auto;
-   
-    
+    padding-left: 0;
+    padding: 21px;
 
-    
+    .aside-container {
+      max-width: 600px;
+      margin: 4rem auto;
     }
-   
   }
 
   header {
@@ -31,7 +25,7 @@ export const Container = styled.div`
     width: 54px;
     height: 54px;
 
-    background: #ffffff;
+    background: var(--white);
     box-shadow: 0px 2px 7px rgba(123, 135, 148, 0.28);
     border-radius: 100%;
     padding: 15px;
@@ -59,9 +53,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
-    
-   
   }
 
   .info {
@@ -83,7 +74,7 @@ export const Container = styled.div`
   }
 
   svg {
-    color: ${(props) => props.theme.svg};
+    color: var(--darksvg);
     width: 20px;
     height: 20px;
     margin-right: 15px;
@@ -91,7 +82,7 @@ export const Container = styled.div`
 
   h3 {
     font-size: 17px;
-    color: ${(props) => props.theme.asideh3};
+    color: var(--gray);
     font-weight: 400;
   }
 
@@ -145,7 +136,6 @@ export const Container = styled.div`
     }
   }
 
- 
   @media (max-width: 890px) {
     .aside-container {
     }

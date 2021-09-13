@@ -16,8 +16,8 @@ export const Container = styled.div`
     background-color: #446677;
     border-radius: 50%;
     position: fixed;
-    top: 25px;
-    right: 25px;
+    top: 20px;
+    right: 75px;
     cursor: pointer;
     box-shadow: 0 0 0 0 #446677, 0 0 0 0 #446677;
     transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
