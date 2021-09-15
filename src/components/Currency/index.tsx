@@ -1,36 +1,15 @@
-import { useEffect, useState } from "react";
 import { Container } from "./styled";
-import axios from "axios";
 
 import { FiRefreshCcw } from "react-icons/fi";
 import { Select } from "antd";
 
 import mockrates from "../../mocks/rates.json";
-
-export type Currency = {
-  label: string;
-  id: string;
-  value: string;
-  flag: string;
-};
-
-export interface CurrencyProps {
-  currencies: Currency[];
-}
+import { UseCurrencies } from "../context/useCurrencies";
 
 const { Option } = Select;
 
 function Currencies() {
-  const [currencies, setCurrencies] = useState<Currency[]>([]);
-
-  const API_BASE_URL =
-    "https://run.mocky.io/v3/87a9b305-789c-4fa8-8b1f-f38ecfbf8534";
-
-  const fetchCurrencies = async () => {
-    const res = await axios.get(API_BASE_URL);
-    const { currencies } = await res.data;
-    setCurrencies(currencies);
-  };
+  const { currencies } = UseCurrencies();
 
   const { convert } = require("cashify");
 
@@ -42,10 +21,6 @@ function Currencies() {
   const result = convert(10, { from: "EUR", to: "GBP", base, rates });
 
   console.log(result);
-
-  useEffect(() => {
-    fetchCurrencies();
-  }, []);
 
   return (
     <Container>

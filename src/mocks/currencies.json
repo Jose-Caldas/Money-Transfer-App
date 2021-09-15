@@ -2,6 +2,14 @@
    
    [
     {
+      "label": "European Union",
+      "id": "EUR",
+      "value": "EUR",
+      "flag": "https://www.countryflags.io/eu/flat/64.png",
+      "rate": 1.1781,
+      "symbol": "€"
+    },   
+    {
       "label": "Canada",
       "id": "CAD",
       "value": "CAD",
@@ -225,15 +233,8 @@
       "flag": "https://www.countryflags.io/gb/flat/64.png",
       "rate": 0.90053,
       "symbol": "£"
-    },
-    {
-      "label": "European Union",
-      "id": "EUR",
-      "value": "EUR",
-      "flag": "https://www.countryflags.io/eu/flat/64.png",
-      "rate": 1.1781,
-      "symbol": "€"
-    }   
+    }
+  
   ]
   
 

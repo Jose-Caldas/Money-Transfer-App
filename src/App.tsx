@@ -8,19 +8,22 @@ import { GlobaStyles } from "./GlobalStyles";
 
 import { ThemeProvider } from "styled-components";
 import theme from "./Theme/theme";
+import { CurrencyProvider } from "./components/context/useCurrencies";
 
 function App() {
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <SideMenu />
-        <TopMenu />
-        <MobileMenu />
-        <Main />
+      <CurrencyProvider>
+        <ThemeProvider theme={theme}>
+          <SideMenu />
+          <TopMenu />
+          <MobileMenu />
+          <Main />
 
-        <Aside />
-        <GlobaStyles />
-      </ThemeProvider>
+          <Aside />
+          <GlobaStyles />
+        </ThemeProvider>
+      </CurrencyProvider>
     </div>
   );
 }
