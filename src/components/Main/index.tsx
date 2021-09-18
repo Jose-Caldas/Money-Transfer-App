@@ -1,10 +1,83 @@
 import { DatePicker } from "antd";
-import React from "react";
 import Currency from "../Currency";
 import Plans from "../Plans";
 import { Container, ChoosePlan, Content } from "./styled";
+import { convert } from "cashify";
+import { useEffect } from "react";
+
+import create from "zustand";
+
+export const rates = {
+  CAD: 1.4824,
+  HKD: 9.2493,
+  ISK: 151.6,
+  PHP: 57.997,
+  DKK: 7.436,
+  HUF: 368.18,
+  CZK: 26.17,
+  AUD: 1.5347,
+  RON: 4.8858,
+  SEK: 10.157,
+  IDR: 17165.19,
+  INR: 86.6105,
+  BRL: 6.6225,
+  RUB: 88.1313,
+  HRK: 7.575,
+  JPY: 130.08,
+  THB: 36.772,
+  CHF: 1.1069,
+  SGD: 1.6013,
+  PLN: 4.6253,
+  BGN: 1.9558,
+  TRY: 8.7701,
+  CNY: 7.7507,
+  NOK: 10.1058,
+  NZD: 1.6567,
+  ZAR: 17.6202,
+  USD: 1.1912,
+  MXN: 24.5306,
+  ILS: 3.929,
+  GBP: 0.85575,
+  KRW: 1343.25,
+  MYR: 4.8976,
+};
+
+interface StoreState {
+  fromAmount: number;
+  setFromAmount: (value: number) => void;
+  toAmount: number;
+  setToAmount: (value: number) => void;
+}
+
+export const useStore = create<StoreState>((set) => ({
+  fromAmount: 0,
+  setFromAmount: (value) => set(() => ({ fromAmount: Number(value) })),
+  toAmount: 0,
+  setToAmount: (value) => set(() => ({ toAmount: Number(value) })),
+}));
 
 function Main() {
+  const store = useStore((state) => state);
+
+  const from = "EUR";
+  const to = "CAD";
+
+  const result = convert(store.fromAmount, {
+    from,
+    to,
+    base: "EUR",
+    rates,
+  });
+
+  useEffect(() => {
+    store.setToAmount(Number(result.toFixed(2)));
+
+    return () => {};
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [result]);
+
+  console.log(result);
+
   return (
     <Container>
       <h1>Send Money</h1>

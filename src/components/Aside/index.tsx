@@ -10,8 +10,11 @@ import {
 
 import image from "../../assets/brazil.png";
 import image2 from "../../assets/germany.png";
+import { useStore } from "../Main";
 
 function Aside() {
+  const store = useStore((state) => state);
+
   return (
     <Container>
       <header>
@@ -27,7 +30,7 @@ function Aside() {
           <h1>Payment Details</h1>
           <div className="content">
             <div>
-              <h2>22,124</h2>
+              <h2>{store.fromAmount}</h2>
               <img src={image} alt="" />
               BRL
             </div>
@@ -36,7 +39,7 @@ function Aside() {
             </div>
 
             <div>
-              <h2>4,124</h2>
+              <h2>{store.toAmount}</h2>
               <img src={image2} alt="" />
               EUR
             </div>
@@ -56,14 +59,14 @@ function Aside() {
                 <FiDollarSign />
                 <h3>Conversion rate</h3>
               </div>
-              <strong>22,124</strong>
+              <strong>{store.fromAmount}</strong>
             </div>
             <div className="info-content">
               <div>
                 <FiShuffle />
                 <h3>Recipient gets</h3>
               </div>
-              <strong>4,124</strong>
+              <strong>{store.toAmount}</strong>
             </div>
           </div>
           <button>Confirm</button>

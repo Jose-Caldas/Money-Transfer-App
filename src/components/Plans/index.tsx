@@ -3,8 +3,6 @@ import { Button } from "./styled";
 import { FaCheckCircle } from "react-icons/fa";
 
 function Plans({ title, text, number }) {
-  // const [toggle, setToggle] = useState(true);
-
   return (
     <Button>
       <div className="checkbox">
