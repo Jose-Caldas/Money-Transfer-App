@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-width: 381px;
+  min-width: 405px;
   padding-left: 49px;
 
   background-color: var(--white);
@@ -129,7 +129,7 @@ export const Container = styled.div`
     }
   }
   strong {
-    font-size: 18px;
+    font-size: 15px;
     color: ${(props) => props.theme.title};
     font-weight: 600;
   }
@@ -140,8 +140,9 @@ export const Container = styled.div`
     padding: 15px 0;
     font-size: 20px;
     font-weight: 500;
+    cursor: pointer;
     &:hover {
-      box-shadow: 0 0 1px 4px var(--pink100);
+      opacity: 0.8;
     }
   }
 

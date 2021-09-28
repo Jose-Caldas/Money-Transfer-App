@@ -1,38 +1,30 @@
 import { Button } from "./styled";
-// import { FaCheckCircle } from "react-icons/fa";
 import { useStore } from "../Main";
 
 export type PlansProps = {
-  title: string;
+  date: string;
   text: string;
   price: number;
 };
 
-function Plans({ title, text = "Express", price = 1.99 }: PlansProps) {
-  const changeBankTransaction = useStore(
-    (state) => state.changeBankTransaction
-  );
+function Plans({ date, text = "Express", price = 1.99 }: PlansProps) {
+  const changeConversionRate = useStore((state) => state.changeConversionRate);
   const changePlan = useStore((state) => state.changePlan);
 
   const handleChange = () => {
-    changeBankTransaction(price);
+    changeConversionRate(price);
     changePlan(text);
   };
 
-  // const handleChangeText = () => {
-  //   changePlan(text);
-  // };
   return (
-    <Button>
+    <Button onChange={handleChange}>
       <div className="checkbox">
-        {/* <FaCheckCircle /> */}
-        <input type="radio" name="plan1" id="plan1" onChange={handleChange} />
+        <input type="radio" name="plan" id={text} value={text} />
+        <label htmlFor={text}>{text}</label>
       </div>
       <div className="center">
         <div className="options">
-          <h2>{title}</h2>
-
-          <small>{text}</small>
+          <h2>{date}</h2>
         </div>
 
         <div>

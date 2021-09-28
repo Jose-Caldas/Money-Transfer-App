@@ -16,7 +16,7 @@ function Aside() {
   const toAmount = useStore((state) => state.toAmount);
   const fromAmount = useStore((state) => state.fromAmount);
   const date = useStore((state) => state.date);
-  const bankTransaction = useStore((state) => state.bankTransaction);
+  const conversionRate = useStore((state) => state.conversionRate);
   const plan = useStore((state) => state.plan);
   console.log(date);
   const { changeDate } = useStore();
@@ -66,7 +66,7 @@ function Aside() {
             <div className="info-content">
               <div>
                 <FiDollarSign />
-                <h3>Conversion rate</h3>
+                <h3>You send</h3>
               </div>
               <strong>{fromAmount}</strong>
             </div>
@@ -81,13 +81,19 @@ function Aside() {
             <div className="info-content">
               <div>
                 <FiDollarSign />
-                <h3>Bank Transaction</h3>
+                <h3>Conversion rate</h3>
               </div>
 
-              <strong>{bankTransaction}</strong>
+              <strong>{conversionRate}</strong>
             </div>
           </div>
-          <button onClick={() => window.alert("Transação Concluida")}>
+          <button
+            onClick={() =>
+              window.alert(
+                `Transaction completed: You send: ${fromAmount} / Recipient gets: ${toAmount} / Conversion Rate: ${conversionRate} / Delivery: ${date} / Payment Details: ${plan}`
+              )
+            }
+          >
             Confirm
           </button>
         </div>
