@@ -43,21 +43,39 @@ export const rates = {
 };
 
 interface StoreState {
+  from: string;
+  to: string;
   fromAmount: number;
   setFromAmount: (value: number) => void;
   toAmount: number;
   setToAmount: (value: number) => void;
+  plan: string;
+  changePlan: (plan: string) => void;
+  date: string;
+  changeDate: (date: string) => void;
+  bankTransaction: number;
 }
 
 export const useStore = create<StoreState>((set) => ({
   fromAmount: 0,
   setFromAmount: (value) => set(() => ({ fromAmount: Number(value) })),
   toAmount: 0,
+  from: "EUR",
+  to: "CAD",
   setToAmount: (value) => set(() => ({ toAmount: Number(value) })),
+  plan: "Express",
+  changePlan: (plan: string) => set(() => ({ plan })),
+  date: "27 July 2020",
+  changeDate: (date: string) => set(() => ({ date })),
+  bankTransaction: 1.99,
 }));
 
 function Main() {
   const store = useStore((state) => state);
+  const plan = useStore((state) => state.plan);
+  const date = useStore((state) => state.date);
+  const changeDate = useStore((state) => state.changeDate);
+  const bankTransaction = useStore((state) => state.bankTransaction);
 
   const from = "EUR";
   const to = "CAD";
@@ -78,11 +96,13 @@ function Main() {
 
   console.log(result);
 
+  const dateFormat = "dd/MM/yyyy";
+
   return (
     <Container>
       <h1>Send Money</h1>
       <header>
-        <h2>22,124</h2>
+        <h2>{store.fromAmount}</h2>
         <h3>available</h3>
       </header>
       <Content>
@@ -93,25 +113,20 @@ function Main() {
         <h1>Choose a plan:</h1>
         <div className="date">
           <h4>Choose the date:</h4>
-          <DatePicker onChange={console.log} />
+          <DatePicker
+            onChange={(value) => {
+              const isoDate = value?.toISOString() || "";
+              changeDate(isoDate);
+            }}
+            bordered={false}
+            format={dateFormat}
+          />
         </div>
       </ChoosePlan>
 
-      <Plans
-        title="Get 27 July 2020 till 12pm"
-        text="Express"
-        number="$ 0.99"
-      />
-      <Plans
-        title="Get 27 July 2020 till 6pm"
-        text="Standard"
-        number="$ 1.00"
-      />
-      <Plans
-        title="Get today till 8pm"
-        text="Only on working days from 11am to 8pm"
-        number="$ 1.00"
-      />
+      <Plans title={date} text={plan} price={bankTransaction} />
+      <Plans title={date} text={plan} price={0.99} />
+      <Plans title={date} text={plan} price={0.59} />
     </Container>
   );
 }

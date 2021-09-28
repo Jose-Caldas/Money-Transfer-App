@@ -13,7 +13,12 @@ import image2 from "../../assets/germany.png";
 import { useStore } from "../Main";
 
 function Aside() {
-  const store = useStore((state) => state);
+  const toAmount = useStore((state) => state.toAmount);
+  const fromAmount = useStore((state) => state.fromAmount);
+  const date = useStore((state) => state.date);
+  const bankTransaction = useStore((state) => state.bankTransaction);
+  console.log(date);
+  const { changeDate } = useStore();
 
   return (
     <Container>
@@ -30,7 +35,7 @@ function Aside() {
           <h1>Payment Details</h1>
           <div className="content">
             <div>
-              <h2>{store.fromAmount}</h2>
+              <h2>{fromAmount}</h2>
               <img src={image} alt="" />
               BRL
             </div>
@@ -39,7 +44,7 @@ function Aside() {
             </div>
 
             <div>
-              <h2>{store.toAmount}</h2>
+              <h2>{toAmount}</h2>
               <img src={image2} alt="" />
               EUR
             </div>
@@ -52,24 +57,35 @@ function Aside() {
                 <FiCalendar />
                 <h3>Delivery</h3>
               </div>
-              <strong>27 July till 12pm</strong>
+              <strong onChange={() => changeDate}>{date}</strong>
             </div>
             <div className="info-content">
               <div>
                 <FiDollarSign />
                 <h3>Conversion rate</h3>
               </div>
-              <strong>{store.fromAmount}</strong>
+              <strong>{fromAmount}</strong>
             </div>
             <div className="info-content">
               <div>
                 <FiShuffle />
                 <h3>Recipient gets</h3>
               </div>
-              <strong>{store.toAmount}</strong>
+
+              <strong>{toAmount}</strong>
+            </div>
+            <div className="info-content">
+              <div>
+                <FiDollarSign />
+                <h3>Bank Transaction</h3>
+              </div>
+
+              <strong>{bankTransaction}</strong>
             </div>
           </div>
-          <button>Confirm</button>
+          <button onClick={() => window.alert("Transação Concluida")}>
+            Confirm
+          </button>
         </div>
       </div>
     </Container>

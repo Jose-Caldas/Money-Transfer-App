@@ -78,7 +78,7 @@ export const Container = styled.div`
   }
 
   .transfer input {
-    width: 100%;
+    width: 80%;
     height: 100%;
     border: none;
     text-align: center;
@@ -86,10 +86,10 @@ export const Container = styled.div`
     outline: none;
     color: ${(props) => props.theme.title};
 
-    &:hover,
+    /* &:hover,
     &:focus {
       box-shadow: 0 0 5px 1px pink;
-    }
+    } */
   }
 
   small {

@@ -1,8 +1,13 @@
-import React from "react";
 import { Button } from "./styled";
 import { FaCheckCircle } from "react-icons/fa";
 
-function Plans({ title, text, number }) {
+export type PlansProps = {
+  title: string;
+  text: string;
+  price: number;
+};
+
+function Plans({ title, text, price }: PlansProps) {
   return (
     <Button>
       <div className="checkbox">
@@ -14,7 +19,7 @@ function Plans({ title, text, number }) {
           <small>{text}</small>
         </div>
         <div>
-          <span>{number}</span>
+          <span>{price}</span>
         </div>
       </div>
     </Button>
