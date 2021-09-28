@@ -54,6 +54,7 @@ interface StoreState {
   date: string;
   changeDate: (date: string) => void;
   bankTransaction: number;
+  changeBankTransaction: (value: number) => void;
 }
 
 export const useStore = create<StoreState>((set) => ({
@@ -67,7 +68,9 @@ export const useStore = create<StoreState>((set) => ({
   changePlan: (plan: string) => set(() => ({ plan })),
   date: "27 July 2020",
   changeDate: (date: string) => set(() => ({ date })),
-  bankTransaction: 1.99,
+  bankTransaction: 0.0,
+  changeBankTransaction: (value) =>
+    set(() => ({ bankTransaction: Number(value) })),
 }));
 
 function Main() {
@@ -124,9 +127,9 @@ function Main() {
         </div>
       </ChoosePlan>
 
-      <Plans title={date} text={plan} price={bankTransaction} />
-      <Plans title={date} text={plan} price={0.99} />
-      <Plans title={date} text={plan} price={0.59} />
+      <Plans title={date} text="Express" price={1.99} />
+      <Plans title={date} text="Standart" price={0.99} />
+      <Plans title={date} text="Economic" price={0.59} />
     </Container>
   );
 }
