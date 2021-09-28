@@ -75,10 +75,9 @@ export const useStore = create<StoreState>((set) => ({
 
 function Main() {
   const store = useStore((state) => state);
-  const plan = useStore((state) => state.plan);
+
   const date = useStore((state) => state.date);
   const changeDate = useStore((state) => state.changeDate);
-  const bankTransaction = useStore((state) => state.bankTransaction);
 
   const from = "EUR";
   const to = "CAD";
@@ -128,7 +127,7 @@ function Main() {
       </ChoosePlan>
 
       <Plans title={date} text="Express" price={1.99} />
-      <Plans title={date} text="Standart" price={0.99} />
+      <Plans title={date} text="Standard" price={0.99} />
       <Plans title={date} text="Economic" price={0.59} />
     </Container>
   );

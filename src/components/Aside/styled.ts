@@ -55,6 +55,15 @@ export const Container = styled.div`
     justify-content: center;
   }
 
+  .details {
+    display: flex;
+    flex-direction: column;
+    h1,
+    h2 {
+      margin: 0;
+    }
+  }
+
   .info {
     height: 300px;
     display: flex;
@@ -150,7 +159,7 @@ export const Wrapper = styled.div`
   display: flex;
 
   @media (min-width: 1200px) {
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   display: flex;

@@ -17,6 +17,7 @@ function Aside() {
   const fromAmount = useStore((state) => state.fromAmount);
   const date = useStore((state) => state.date);
   const bankTransaction = useStore((state) => state.bankTransaction);
+  const plan = useStore((state) => state.plan);
   console.log(date);
   const { changeDate } = useStore();
 
@@ -32,7 +33,10 @@ function Aside() {
       </header>
       <div className="aside-container">
         <Wrapper>
-          <h1>Payment Details</h1>
+          <div className="details">
+            <h1>Payment Details</h1>
+            <h2>{plan}</h2>
+          </div>
           <div className="content">
             <div>
               <h2>{fromAmount}</h2>

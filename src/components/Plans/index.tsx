@@ -8,14 +8,20 @@ export type PlansProps = {
   price: number;
 };
 
-function Plans({ title, text, price = 1.99 }: PlansProps) {
+function Plans({ title, text = "Express", price = 1.99 }: PlansProps) {
   const changeBankTransaction = useStore(
     (state) => state.changeBankTransaction
   );
+  const changePlan = useStore((state) => state.changePlan);
 
   const handleChange = () => {
     changeBankTransaction(price);
+    changePlan(text);
   };
+
+  // const handleChangeText = () => {
+  //   changePlan(text);
+  // };
   return (
     <Button>
       <div className="checkbox">
@@ -25,8 +31,10 @@ function Plans({ title, text, price = 1.99 }: PlansProps) {
       <div className="center">
         <div className="options">
           <h2>{title}</h2>
+
           <small>{text}</small>
         </div>
+
         <div>
           <span>{price}</span>
         </div>
