@@ -4,20 +4,15 @@ import { FiRefreshCcw } from "react-icons/fi";
 import { Select } from "antd";
 
 import { UseCurrencies } from "../context/useCurrencies";
-import { useState } from "react";
-import { useStore } from "../Main";
+import { useStore } from "../context/store";
 import { convert } from "cashify";
 import { rates } from "../Main/index";
 const { Option } = Select;
 
 function Currencies() {
   const store = useStore((state) => state);
-  const { setFromAmount, setToAmount } = useStore();
 
   const { currencies } = UseCurrencies();
-
-  const [fromCurrency, setFromCurrency] = useState("European Union");
-  const [toCurrency, setToCurrency] = useState("Canada");
 
   const handleFromAmountChange = (e) => {
     if (e.target.value >= 0) {
@@ -36,11 +31,20 @@ function Currencies() {
   };
 
   function refresh() {
-    setFromCurrency("European Union");
-    setToCurrency("Canada");
-    setFromAmount(0);
-    setToAmount(0);
+    store.setFrom("European Union");
+    store.setTo("Canada");
+    store.setFromAmount(0);
+    store.setToAmount(0);
   }
+
+  const handleChangeAbbreviation = () => {
+    currencies.map((currency) => store.setAbbreviation(currency.id));
+    console.log(currencies);
+  };
+
+  localStorage.setItem("store", store.toAmount.toString());
+  const Storage = localStorage.getItem("store");
+  console.log(Storage);
 
   return (
     <Container>
@@ -48,8 +52,8 @@ function Currencies() {
         <div className="select">
           <Select
             placeholder="Select a country"
-            value={fromCurrency}
-            onChange={(value) => setFromCurrency(value)}
+            value={store.from}
+            onChange={(value) => store.setFrom(value)}
           >
             {currencies.map((currency) => (
               <Option
@@ -79,7 +83,9 @@ function Currencies() {
               min={1}
               onChange={handleFromAmountChange}
             ></input>
-            <small>EUR</small>
+            <small onChange={handleChangeAbbreviation}>
+              {store.abbreviation}
+            </small>
           </div>
         </div>
         <button className="refresh" onClick={() => refresh()}>
@@ -88,9 +94,9 @@ function Currencies() {
         <div className="select">
           <Select
             placeholder="Select a country"
-            value={toCurrency}
-            onChange={(value) => setToCurrency(value)}
-            defaultValue={toCurrency}
+            value={store.to}
+            onChange={(value) => store.setTo(value)}
+            defaultValue={store.to}
           >
             {currencies.map((currency) => (
               <Option

@@ -5,7 +5,8 @@ import { Container, ChoosePlan, Content } from "./styled";
 import { convert } from "cashify";
 import { useEffect } from "react";
 
-import create from "zustand";
+import { useStore } from "../context/store";
+// import { UseCurrencies } from "../context/useCurrencies";
 
 export const rates = {
   CAD: 1.4824,
@@ -42,42 +43,9 @@ export const rates = {
   MYR: 4.8976,
 };
 
-interface StoreState {
-  from: string;
-  to: string;
-  fromAmount: number;
-  setFromAmount: (value: number) => void;
-  toAmount: number;
-  setToAmount: (value: number) => void;
-  plan: string;
-  changePlan: (plan: string) => void;
-  date: string;
-  changeDate: (date: string) => void;
-  conversionRate: number;
-  changeConversionRate: (value: number) => void;
-}
-
-export const useStore = create<StoreState>((set) => ({
-  fromAmount: 0,
-  setFromAmount: (value) => set(() => ({ fromAmount: Number(value) })),
-  toAmount: 0,
-  from: "EUR",
-  to: "CAD",
-  setToAmount: (value) => set(() => ({ toAmount: Number(value) })),
-  plan: "Express",
-  changePlan: (plan: string) => set(() => ({ plan })),
-  date: "27 July 2020",
-  changeDate: (date: string) => set(() => ({ date })),
-  conversionRate: 0.0,
-  changeConversionRate: (value) =>
-    set(() => ({ conversionRate: Number(value) })),
-}));
-
 function Main() {
+  // const { currencies } = UseCurrencies();
   const store = useStore((state) => state);
-
-  const date = useStore((state) => state.date);
-  const changeDate = useStore((state) => state.changeDate);
 
   const from = "EUR";
   const to = "CAD";
@@ -92,11 +60,8 @@ function Main() {
   useEffect(() => {
     store.setToAmount(Number(result.toFixed(2)));
 
-    return () => {};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [result]);
-
-  console.log(result);
 
   const dateFormat = "dd/MM/yyyy";
 
@@ -117,8 +82,8 @@ function Main() {
           <h4>Choose the date:</h4>
           <DatePicker
             onChange={(value) => {
-              const isoDate = value?.toISOString() || "";
-              changeDate(isoDate);
+              const isoFormat = value.toJSON() || "";
+              store.changeDate(isoFormat);
             }}
             bordered={false}
             format={dateFormat}
@@ -126,9 +91,9 @@ function Main() {
         </div>
       </ChoosePlan>
 
-      <Plans date={date} text="Express" price={1.99} />
-      <Plans date={date} text="Standard" price={0.99} />
-      <Plans date={date} text="Economic" price={0.59} />
+      <Plans date={store.date} text="Express" price={1.99} />
+      <Plans date={store.date} text="Standard" price={0.99} />
+      <Plans date={store.date} text="Economic" price={0.59} />
     </Container>
   );
 }

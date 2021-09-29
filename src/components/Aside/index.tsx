@@ -10,16 +10,20 @@ import {
 
 import image from "../../assets/brazil.png";
 import image2 from "../../assets/germany.png";
-import { useStore } from "../Main";
+import { useStore } from "../context/store";
 
 function Aside() {
-  const toAmount = useStore((state) => state.toAmount);
-  const fromAmount = useStore((state) => state.fromAmount);
-  const date = useStore((state) => state.date);
-  const conversionRate = useStore((state) => state.conversionRate);
-  const plan = useStore((state) => state.plan);
-  console.log(date);
-  const { changeDate } = useStore();
+  const store = useStore();
+
+  function message() {
+    if (store.conversionRate && store.fromAmount) {
+      alert(
+        `Transaction completed: You send: ${store.fromAmount} / Recipient gets: ${store.toAmount} / Conversion Rate: ${store.conversionRate} / Delivery: ${store.date} / Payment Details: ${store.plan}`
+      );
+    } else {
+      alert("Incomplete Transaction: Choose a Plan and a Currency Conversion");
+    }
+  }
 
   return (
     <Container>
@@ -35,11 +39,11 @@ function Aside() {
         <Wrapper>
           <div className="details">
             <h1>Payment Details</h1>
-            <h2>{plan}</h2>
+            <h2>{!store.plan ? "waiting for a plan..." : store.plan}</h2>
           </div>
           <div className="content">
             <div>
-              <h2>{fromAmount}</h2>
+              <h2>{store.fromAmount}</h2>
               <img src={image} alt="" />
               BRL
             </div>
@@ -48,7 +52,7 @@ function Aside() {
             </div>
 
             <div>
-              <h2>{toAmount}</h2>
+              <h2>{store.toAmount}</h2>
               <img src={image2} alt="" />
               EUR
             </div>
@@ -61,14 +65,14 @@ function Aside() {
                 <FiCalendar />
                 <h3>Delivery</h3>
               </div>
-              <strong onChange={() => changeDate}>{date}</strong>
+              <strong onChange={() => store.changeDate}>{store.date}</strong>
             </div>
             <div className="info-content">
               <div>
                 <FiDollarSign />
                 <h3>You send</h3>
               </div>
-              <strong>{fromAmount}</strong>
+              <strong>{store.fromAmount}</strong>
             </div>
             <div className="info-content">
               <div>
@@ -76,7 +80,7 @@ function Aside() {
                 <h3>Recipient gets</h3>
               </div>
 
-              <strong>{toAmount}</strong>
+              <strong>{store.toAmount}</strong>
             </div>
             <div className="info-content">
               <div>
@@ -84,16 +88,10 @@ function Aside() {
                 <h3>Conversion rate</h3>
               </div>
 
-              <strong>{conversionRate}</strong>
+              <strong>{store.conversionRate}</strong>
             </div>
           </div>
-          <button
-            onClick={() =>
-              window.alert(
-                `Transaction completed: You send: ${fromAmount} / Recipient gets: ${toAmount} / Conversion Rate: ${conversionRate} / Delivery: ${date} / Payment Details: ${plan}`
-              )
-            }
-          >
+          <button title="Confirm transaction" onClick={message}>
             Confirm
           </button>
         </div>

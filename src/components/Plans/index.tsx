@@ -1,5 +1,5 @@
 import { Button } from "./styled";
-import { useStore } from "../Main";
+import { useStore } from "../context/store";
 
 export type PlansProps = {
   date: string;
@@ -7,7 +7,7 @@ export type PlansProps = {
   price: number;
 };
 
-function Plans({ date, text = "Express", price = 1.99 }: PlansProps) {
+function Plans({ date, text, price }: PlansProps) {
   const changeConversionRate = useStore((state) => state.changeConversionRate);
   const changePlan = useStore((state) => state.changePlan);
 
@@ -17,7 +17,7 @@ function Plans({ date, text = "Express", price = 1.99 }: PlansProps) {
   };
 
   return (
-    <Button onChange={handleChange}>
+    <Button title={`Plan: ${text}`} onChange={handleChange}>
       <div className="checkbox">
         <input type="radio" name="plan" id={text} value={text} />
         <label htmlFor={text}>{text}</label>
