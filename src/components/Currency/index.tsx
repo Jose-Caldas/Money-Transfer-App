@@ -3,26 +3,32 @@ import { Container } from "./styled";
 import { FiRefreshCcw } from "react-icons/fi";
 import { Select } from "antd";
 
-import { UseCurrencies } from "../context/useCurrencies";
+import { useCurrencies } from "../context/useCurrencies";
 import { useStore } from "../context/store";
 import { convert } from "cashify";
 import { rates } from "../Main/index";
+import { useEffect } from "react";
 const { Option } = Select;
 
 function Currencies() {
   const store = useStore((state) => state);
 
-  const { currencies } = UseCurrencies();
+  const { currencies } = useCurrencies();
 
   const handleFromAmountChange = (e) => {
     if (e.target.value >= 0) {
       store.setFromAmount(e.target.value);
     }
   };
+
+  // localStorage.setItem("store", JSON.stringify(store.toAmount));
+  // const data = localStorage.getItem("store");
+  // console.log(data);
+
   const handleToAmountChange = (e) => {
     const result = convert(Number(e.target.value), {
-      from: "EUR",
-      to: "CAD",
+      from: store.from,
+      to: store.to,
       base: "EUR",
       rates,
     });
@@ -31,20 +37,19 @@ function Currencies() {
   };
 
   function refresh() {
-    store.setFrom("European Union");
-    store.setTo("Canada");
-    store.setFromAmount(0);
-    store.setToAmount(0);
+    store.setFrom(store.to);
+    store.setTo(store.from);
   }
 
-  const handleChangeAbbreviation = () => {
-    currencies.map((currency) => store.setAbbreviation(currency.id));
-    console.log(currencies);
-  };
-
-  localStorage.setItem("store", store.toAmount.toString());
-  const Storage = localStorage.getItem("store");
-  console.log(Storage);
+  useEffect(() => {
+    const result = convert(store.fromAmount, {
+      from: store.from,
+      to: store.to,
+      base: "EUR",
+      rates,
+    });
+    store.setFromAmount(Number(result.toFixed(2)));
+  }, [store.from, store.to]);
 
   return (
     <Container>
@@ -61,7 +66,7 @@ function Currencies() {
                   fontSize: 15,
                 }}
                 key={currency.id}
-                value={currency.label}
+                value={currency.id}
                 id={currency.id}
                 flag={currency.flag}
               >
@@ -83,9 +88,7 @@ function Currencies() {
               min={1}
               onChange={handleFromAmountChange}
             ></input>
-            <small onChange={handleChangeAbbreviation}>
-              {store.abbreviation}
-            </small>
+            <small>{store.from}</small>
           </div>
         </div>
         <button className="refresh" onClick={() => refresh()}>
@@ -104,7 +107,7 @@ function Currencies() {
                   fontSize: 15,
                 }}
                 key={currency.id}
-                value={currency.label}
+                value={currency.id}
                 id={currency.id}
                 flag={currency.flag}
               >
@@ -127,7 +130,7 @@ function Currencies() {
               value={store.toAmount}
               onChange={handleToAmountChange}
             ></input>
-            <small>CAD</small>
+            <small>{store.to}</small>
           </div>
         </div>
       </div>

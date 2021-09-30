@@ -51,5 +51,5 @@ const CurrencyProvider = ({ children }: CurrenciesProviderProps) => {
   );
 };
 
-const UseCurrencies = () => useContext(CurrencyContext);
-export { CurrencyProvider, UseCurrencies };
+const useCurrencies = () => useContext(CurrencyContext);
+export { CurrencyProvider, useCurrencies };
