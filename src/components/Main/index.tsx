@@ -47,13 +47,13 @@ function Main() {
   // const { currencies } = UseCurrencies();
   const store = useStore((state) => state);
 
-  const from = "EUR";
-  const to = "CAD";
+  const from = store.from;
+  const to = store.to;
 
   const result = convert(store.fromAmount, {
     from,
     to,
-    base: "EUR",
+    base: store.base,
     rates,
   });
 

@@ -29,7 +29,7 @@ function Currencies() {
     const result = convert(Number(e.target.value), {
       from: store.from,
       to: store.to,
-      base: "EUR",
+      base: store.base,
       rates,
     });
 
@@ -45,11 +45,12 @@ function Currencies() {
     const result = convert(store.fromAmount, {
       from: store.from,
       to: store.to,
-      base: "EUR",
+      base: store.base,
       rates,
     });
     store.setFromAmount(Number(result.toFixed(2)));
-  }, [store.from, store.to]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Container>

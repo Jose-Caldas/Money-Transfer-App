@@ -15,8 +15,8 @@ interface StoreState {
   changeDate: (date: string) => void;
   conversionRate: number;
   changeConversionRate: (value: number) => void;
-  abbreviation: string;
-  setAbbreviation: (abbreviation: string) => void;
+  base: string;
+  setBase: (abbreviation: string) => void;
 }
 
 export const useStore = create<StoreState>((set) => ({
@@ -35,6 +35,6 @@ export const useStore = create<StoreState>((set) => ({
   conversionRate: 0.0,
   changeConversionRate: (value) =>
     set(() => ({ conversionRate: Number(value) })),
-  abbreviation: "EUR",
-  setAbbreviation: (value) => set(() => ({ abbreviation: String(value) })),
+  base: "EUR",
+  setBase: (value) => set(() => ({ base: String(value) })),
 }));

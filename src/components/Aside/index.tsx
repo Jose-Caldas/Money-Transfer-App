@@ -45,7 +45,7 @@ function Aside() {
             <div>
               <h2>{store.fromAmount}</h2>
               <img src={image} alt="" />
-              BRL
+              {store.from}
             </div>
             <div>
               <FiArrowRight />
@@ -54,7 +54,7 @@ function Aside() {
             <div>
               <h2>{store.toAmount}</h2>
               <img src={image2} alt="" />
-              EUR
+              {store.to}
             </div>
           </div>
         </Wrapper>
