@@ -1,4 +1,7 @@
 import create from "zustand";
+import symbolsMock from "../../mocks/symbols.json";
+const symbols = symbolsMock;
+console.log(symbols);
 
 interface StoreState {
   from: string;
@@ -17,6 +20,8 @@ interface StoreState {
   changeConversionRate: (value: number) => void;
   base: string;
   setBase: (abbreviation: string) => void;
+  symbol: string;
+  setSymbol: (value: string) => void;
 }
 
 export const useStore = create<StoreState>((set) => ({
@@ -37,4 +42,6 @@ export const useStore = create<StoreState>((set) => ({
     set(() => ({ conversionRate: Number(value) })),
   base: "EUR",
   setBase: (value) => set(() => ({ base: String(value) })),
+  symbol: "",
+  setSymbol: (value) => set(() => ({ symbol: String(value) })),
 }));

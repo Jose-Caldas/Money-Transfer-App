@@ -58,9 +58,21 @@ export const Container = styled.div`
   .details {
     display: flex;
     flex-direction: column;
-    h1,
-    h2 {
+    h1 {
       margin: 0;
+    }
+  }
+
+  .plan-detail {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+    gap: 1rem;
+    h2 {
+    }
+    strong {
+      color: #f364a2;
+      font-size: 20px;
     }
   }
 
@@ -98,13 +110,14 @@ export const Container = styled.div`
   .content {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 
     h2 {
       font-size: 18px;
       margin-bottom: 10px;
       color: ${(props) => props.theme.title};
       margin: 0;
+      font-weight: bold;
     }
     img {
       margin-right: 1rem;

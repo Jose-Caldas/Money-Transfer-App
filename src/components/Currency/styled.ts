@@ -85,11 +85,6 @@ export const Container = styled.div`
     background-color: #f5f7fa;
     outline: none;
     color: ${(props) => props.theme.title};
-
-    /* &:hover,
-    &:focus {
-      box-shadow: 0 0 5px 1px pink;
-    } */
   }
 
   small {

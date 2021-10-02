@@ -1,12 +1,13 @@
 import { Container } from "./styled";
 
 import { FiRefreshCcw } from "react-icons/fi";
-import { Select } from "antd";
+import { Select, Button } from "antd";
 
 import { useCurrencies } from "../context/useCurrencies";
 import { useStore } from "../context/store";
 import { convert } from "cashify";
-import { rates } from "../Main/index";
+import { rates } from "../../mocks/rates";
+
 import { useEffect } from "react";
 const { Option } = Select;
 
@@ -25,7 +26,7 @@ function Currencies() {
   // const data = localStorage.getItem("store");
   // console.log(data);
 
-  const handleToAmountChange = (e) => {
+  const handleToAmountChange = (e: { target: { value: any } }) => {
     const result = convert(Number(e.target.value), {
       from: store.from,
       to: store.to,
@@ -83,6 +84,7 @@ function Currencies() {
           </Select>
           <div className="transfer">
             <small>You send</small>
+
             <input
               value={store.fromAmount}
               type="number"
@@ -92,9 +94,9 @@ function Currencies() {
             <small>{store.from}</small>
           </div>
         </div>
-        <button className="refresh" onClick={() => refresh()}>
-          <FiRefreshCcw />
-        </button>
+        <Button className="refresh" onClick={() => refresh()}>
+          <FiRefreshCcw size={24} />
+        </Button>
         <div className="select">
           <Select
             placeholder="Select a country"

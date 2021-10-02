@@ -8,8 +8,6 @@ import {
   FiShuffle,
 } from "react-icons/fi";
 
-import image from "../../assets/brazil.png";
-import image2 from "../../assets/germany.png";
 import { useStore } from "../context/store";
 
 function Aside() {
@@ -39,12 +37,14 @@ function Aside() {
         <Wrapper>
           <div className="details">
             <h1>Payment Details</h1>
-            <h2>{!store.plan ? "waiting for a plan..." : store.plan}</h2>
+            <div className="plan-detail">
+              <h2>Plan:</h2>
+              <strong>{store.plan}</strong>
+            </div>
           </div>
           <div className="content">
             <div>
               <h2>{store.fromAmount}</h2>
-              <img src={image} alt="" />
               {store.from}
             </div>
             <div>
@@ -53,7 +53,6 @@ function Aside() {
 
             <div>
               <h2>{store.toAmount}</h2>
-              <img src={image2} alt="" />
               {store.to}
             </div>
           </div>

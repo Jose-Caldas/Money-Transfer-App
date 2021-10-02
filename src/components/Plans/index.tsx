@@ -28,7 +28,7 @@ function Plans({ date, text, price }: PlansProps) {
         </div>
 
         <div>
-          <span>{price}</span>
+          <span>$ {price}</span>
         </div>
       </div>
     </Button>

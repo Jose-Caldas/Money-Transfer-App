@@ -1,9 +1,18 @@
 # A Money Transfer App
 
-Iniciado com create-react-app
+Aplicativo para conversão e transferência de moeda com base na conversão do Euro.
 
 # Techs
 
+Iniciado com create-react-app
+
 - [ ] ReactJs
+- [ ] TypeScript
 - [ ] Styled-Components
-- [ ] Redux
+- [ ] Zustand
+- [ ] React Hooks
+- [ ] Ant Design
+- [ ] React Icons
+- [ ] Context API
+- [ ] CurrencyJs
+- [ ] Cashify
