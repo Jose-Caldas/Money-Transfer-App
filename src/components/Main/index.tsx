@@ -33,7 +33,7 @@ function Main() {
     <Container>
       <h1>Send Money</h1>
       <header>
-        <h2>{store.fromAmount}</h2>
+        <h2>{22.124}</h2>
         <h3>available</h3>
       </header>
       <Content>

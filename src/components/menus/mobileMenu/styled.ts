@@ -1,6 +1,31 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const Header = styled.div`
+  width: 100%;
+
+  display: none;
+
+  @media (max-width: 890px) {
+    display: block;
+    display: flex;
+    gap: 16px;
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+`;
+
+export const Wrapper = styled.div`
   display: none;
 
   *:before,
@@ -13,26 +38,26 @@ export const Container = styled.div`
   .menu {
     width: 60px;
     height: 60px;
-    background-color: #446677;
+    background-color: #f7f5fa;
     border-radius: 50%;
     position: fixed;
     top: 20px;
     right: 75px;
     cursor: pointer;
-    box-shadow: 0 0 0 0 #446677, 0 0 0 0 #446677;
+    box-shadow: 0 0 0 0 #f7f5fa, 0 0 0 0 #f7f5fa;
     transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
     z-index: 10;
   }
 
   .menu:hover {
-    box-shadow: 0 0 0 8px #446677, 0 0 0 8px #446677;
+    box-shadow: 0 0 0 8px #f7f5fa, 0 0 0 8px #f7f5fa;
   }
 
   .hamburguer {
     display: block;
     width: 30px;
     height: 2px;
-    background-color: #fff;
+    background-color: #1f2933;
     position: relative;
     top: 29px;
     left: 15px;
@@ -45,7 +70,7 @@ export const Container = styled.div`
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #1f2933;
     position: absolute;
     transition: 0.5s ease-in-out;
   }
@@ -62,7 +87,7 @@ export const Container = styled.div`
   }
 
   input:checked ~ label .menu {
-    box-shadow: 0 0 0 130vw #446677, 0 0 0 130vh #446677;
+    box-shadow: 0 0 0 130vw #f7f5fa, 0 0 0 130vh #f7f5fa;
   }
 
   input:checked ~ label .hamburguer {
@@ -78,7 +103,7 @@ export const Container = styled.div`
   }
 
   input:checked ~ ul {
-    opacity: 1;
+    display: block;
     z-index: 10;
   }
 
@@ -88,7 +113,7 @@ export const Container = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    opacity: 0;
+    display: none;
     transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     position: fixed;
   }
@@ -97,7 +122,7 @@ export const Container = styled.div`
     display: flex;
     font-size: 20px;
     text-decoration: none;
-    color: #fff;
+    color: #1f2933;
     margin-bottom: 40px;
     align-items: center;
   }

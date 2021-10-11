@@ -58,18 +58,21 @@ export const Container = styled.div`
   }
 
   .refresh {
-    background: transparent;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
     height: 50px;
     border: none;
-    margin: 80px auto;
+    margin: 80px 15px;
     cursor: pointer;
+    padding: 0;
   }
 
   .refresh svg {
+    background: transparent;
+    border: none;
     color: var(--pink200);
     width: 100%;
     font-size: 30px;
@@ -78,7 +81,7 @@ export const Container = styled.div`
   }
 
   .transfer input {
-    width: 80%;
+    width: 100%;
     height: 100%;
     border: none;
     text-align: center;
@@ -102,7 +105,12 @@ export const Container = styled.div`
     .refresh {
       display: flex;
       justify-content: center;
-      margin: 20px auto !important;
+
+      @media (max-width: 1200px) {
+        margin: 20px auto !important;
+        margin: 0;
+        padding: 0;
+      }
     }
 
     .select,
@@ -117,7 +125,7 @@ export const Container = styled.div`
       width: 100%;
     }
     .refresh {
-      margin: 80px 50px;
+      padding: 0;
     }
     .currency-select {
       margin: 4rem 0;

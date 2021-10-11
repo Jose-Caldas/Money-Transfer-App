@@ -14,13 +14,13 @@ export const Container = styled.div`
   @media (max-width: 1200px) {
     margin-top: 10rem;
     margin-bottom: 5rem;
-    padding: 0 21px;
+
     margin: 4rem auto;
     width: 100%;
   }
 
   @media (max-width: 768px) {
-    margin-top: 10rem;
+    margin-top: 4rem;
   }
 
   header {
@@ -65,10 +65,15 @@ export const ChoosePlan = styled.div`
   .date {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     h4 {
       margin: 0;
       margin-right: 10px;
+
+      @media (max-width: 450px) {
+        font-size: 14px;
+      }
     }
 
     svg {

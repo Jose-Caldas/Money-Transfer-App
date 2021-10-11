@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-width: 405px;
+  width: 405px;
   padding-left: 49px;
 
-  background-color: var(--white);
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
   @media (max-width: 1200px) {
     padding-left: 0;
-    padding: 21px;
 
     .aside-container {
       max-width: 600px;
@@ -19,6 +21,10 @@ export const Container = styled.div`
     display: flex;
     justify-content: flex-end;
     padding: 0 1rem;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   header button {
@@ -92,6 +98,8 @@ export const Container = styled.div`
   .info-content {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 10px;
   }
 
   svg {

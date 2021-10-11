@@ -3,7 +3,7 @@ export default {
   fontColor: "#000",
   bgbutton: "orangered",
   colorButton: "#fff",
-  title: "#1F2933 ",
+  title: "#1F2933",
   bg: "#fff",
   li: "#3E4C59",
   small: "#616E7C",
