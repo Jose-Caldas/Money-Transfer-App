@@ -21,6 +21,7 @@ function App() {
           <Main />
 
           <Aside />
+
           <GlobaStyles />
         </ThemeProvider>
       </CurrencyProvider>

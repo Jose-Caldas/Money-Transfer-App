@@ -5,6 +5,7 @@ import { Container, ChoosePlan, Content } from "./styled";
 import { convert } from "cashify";
 import { useEffect } from "react";
 import { rates } from "../../mocks/rates";
+import dayjs from "dayjs";
 
 import { useStore } from "../context/store";
 
@@ -27,13 +28,16 @@ function Main() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [result]);
 
-  const dateFormat = "dd/MM/yyyy";
+  const dateFormat = dayjs(store.date).format("DD/MM/YYYY");
+  console.log(dateFormat);
+
+  console.log(store.date);
 
   return (
     <Container>
       <h1>Send Money</h1>
       <header>
-        <h2>{22.124}</h2>
+        <h2>$ 22,124</h2>
         <h3>available</h3>
       </header>
       <Content>
@@ -46,11 +50,9 @@ function Main() {
           <h4>Choose the date:</h4>
           <DatePicker
             onChange={(value) => {
-              const isoFormat = value.toJSON() || "";
+              const isoFormat = dayjs(value.toJSON()).format("DD/MM/YYYY");
               store.changeDate(isoFormat);
             }}
-            bordered={false}
-            format={dateFormat}
           />
         </div>
       </ChoosePlan>

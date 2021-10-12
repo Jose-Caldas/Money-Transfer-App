@@ -23,6 +23,21 @@ function Aside() {
     }
   }
 
+  const numberFrom = store.fromAmount;
+
+  const formatFrom = new Intl.NumberFormat("ja-JP", {
+    style: "currency",
+    currency: store.from,
+  }).format(numberFrom);
+  const numberTo = store.toAmount;
+
+  const formatTo = new Intl.NumberFormat("ja-JP", {
+    style: "currency",
+    currency: store.to,
+  }).format(numberTo);
+
+  console.log(formatFrom, formatTo);
+
   return (
     <Container>
       <header>
@@ -44,7 +59,7 @@ function Aside() {
           </div>
           <div className="content">
             <div>
-              <h2>{store.fromAmount}</h2>
+              <h2>{formatFrom}</h2>
               {store.from}
             </div>
             <div>
@@ -52,7 +67,7 @@ function Aside() {
             </div>
 
             <div>
-              <h2>{store.toAmount}</h2>
+              <h2>{formatTo}</h2>
               {store.to}
             </div>
           </div>
@@ -71,7 +86,7 @@ function Aside() {
                 <FiDollarSign />
                 <h3>You send</h3>
               </div>
-              <strong>{store.fromAmount}</strong>
+              <strong>{formatFrom}</strong>
             </div>
             <div className="info-content">
               <div>
@@ -79,7 +94,7 @@ function Aside() {
                 <h3>Recipient gets</h3>
               </div>
 
-              <strong>{store.toAmount}</strong>
+              <strong>{formatTo}</strong>
             </div>
             <div className="info-content">
               <div>
@@ -87,7 +102,7 @@ function Aside() {
                 <h3>Conversion rate</h3>
               </div>
 
-              <strong>{store.conversionRate}</strong>
+              <strong>$ {store.conversionRate}</strong>
             </div>
           </div>
           <button title="Confirm transaction" onClick={message}>

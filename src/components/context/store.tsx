@@ -1,7 +1,10 @@
+import dayjs from "dayjs";
 import create from "zustand";
 import symbolsMock from "../../mocks/symbols.json";
 const symbols = symbolsMock;
 console.log(symbols);
+
+const dateFormat = dayjs(new Date()).format("YYYY/MM/DD");
 
 interface StoreState {
   from: string;
@@ -35,7 +38,7 @@ export const useStore = create<StoreState>((set) => ({
   setTo: (value) => set(() => ({ to: String(value) })),
   plan: "",
   changePlan: (plan: string) => set(() => ({ plan })),
-  date: "27 July 2020",
+  date: dateFormat,
   changeDate: (date: string) => set(() => ({ date })),
   conversionRate: 0.0,
   changeConversionRate: (value) =>
