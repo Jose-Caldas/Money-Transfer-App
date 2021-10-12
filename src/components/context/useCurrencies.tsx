@@ -36,9 +36,23 @@ const CurrencyProvider = ({ children }: CurrenciesProviderProps) => {
   const fetchCurrencies = async () => {
     const res = await axios.get(API_BASE_URL);
     const { currencies } = await res.data;
+
     setCurrencies(currencies);
     console.log(currencies);
   };
+
+  // Inverter os valores vindo da API do indice 7  "label": "RON",  "id": "Romania",
+
+  const spliceArray = currencies.splice(7, 1, {
+    label: "Romania",
+    id: "RON",
+    value: "Romania",
+    flag: "https://www.countryflags.io/ro/flat/64.png",
+  });
+  console.log(spliceArray);
+
+  const newArray = [...currencies];
+  console.log(newArray);
 
   useEffect(() => {
     fetchCurrencies();
