@@ -28,11 +28,6 @@ function Main() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [result]);
 
-  const dateFormat = dayjs(store.date).format("DD/MM/YYYY");
-  console.log(dateFormat);
-
-  console.log(store.date);
-
   return (
     <Container>
       <h1>Send Money</h1>

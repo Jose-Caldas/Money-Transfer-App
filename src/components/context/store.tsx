@@ -4,7 +4,7 @@ import symbolsMock from "../../mocks/symbols.json";
 const symbols = symbolsMock;
 console.log(symbols);
 
-const dateFormat = dayjs(new Date()).format("YYYY/MM/DD");
+const dateFormat = dayjs(new Date()).format("DD/MM/YYYY");
 
 interface StoreState {
   from: string;
