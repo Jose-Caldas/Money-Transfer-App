@@ -28,8 +28,8 @@ export const Container = styled.div`
   }
 
   header button {
-    width: 54px;
-    height: 54px;
+    /* width: 54px; */
+    /* height: 54px; */
 
     background: var(--white);
     box-shadow: 0px 2px 7px rgba(123, 135, 148, 0.28);

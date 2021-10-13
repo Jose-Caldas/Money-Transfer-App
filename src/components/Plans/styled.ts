@@ -1,19 +1,30 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Label = styled.label`
   width: 100%;
   height: 83px;
   display: flex;
   align-items: center;
-  outline: none;
+  justify-content: space-between;
 
   border: 2px solid var(--gray400);
   border-radius: 4px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
   background: transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
   &:hover {
-    box-shadow: 0 0 20px var(--gray400);
+    box-shadow: 0 0 2px #f364a2;
+    background-color: #fff6f9;
+    border: 2px solid #f364a2;
+  }
+
+  .plan-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   h2 {
@@ -37,9 +48,7 @@ export const Button = styled.button`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h2 {
-      margin-left: 1rem;
-    }
+    margin-left: 20px;
   }
 
   .center {
@@ -50,7 +59,11 @@ export const Button = styled.button`
     text-align: start;
   }
 
-  .checkbox svg {
+  .radio input {
+    cursor: pointer;
+  }
+
+  .radio svg {
     width: 20px;
     height: 20px;
     background-color: ${(props) => props.theme.checkbox};
@@ -58,6 +71,11 @@ export const Button = styled.button`
     margin-right: 20px;
     border: 1px solid gray;
     border-radius: 50%;
+    color: #f364a2;
+
+    &:focus {
+      display: block;
+    }
   }
 
   @media (max-width: 768px) {

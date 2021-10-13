@@ -1,4 +1,4 @@
-import { Button } from "./styled";
+import { Label } from "./styled";
 import { useStore } from "../context/store";
 
 export type PlansProps = {
@@ -17,21 +17,33 @@ function Plans({ date, text, price }: PlansProps) {
   };
 
   return (
-    <Button title={`Plan: ${text}`} onChange={handleChange}>
-      <div className="checkbox">
-        <input type="radio" name="plan" id={text} value={text} />
-        <label htmlFor={text}>{text}</label>
-      </div>
-      <div className="center">
-        <div className="options">
-          <h2>{date}</h2>
+    <Label htmlFor={text}>
+      <div
+        className="plan-container"
+        title={`Plan: ${text}`}
+        onClick={handleChange}
+      >
+        <div className="radio">
+          <input
+            type="radio"
+            name="plan"
+            id={text}
+            value={text}
+            style={{ width: 20, height: 20, backgroundColor: "red" }}
+          />
         </div>
+        <div className="center">
+          <div className="options">
+            <h2>Get {date}</h2>
+            {text}
+          </div>
 
-        <div>
-          <span>$ {price}</span>
+          <div>
+            <span>$ {price}</span>
+          </div>
         </div>
       </div>
-    </Button>
+    </Label>
   );
 }
 
