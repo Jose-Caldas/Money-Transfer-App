@@ -18,7 +18,7 @@ function SideMenu() {
         <img src={image} alt="" />
         <div className="profile-info">
           <strong>John Doe</strong>
-          <small>2312T45B</small>
+          <small>Code T544D4</small>
         </div>
       </Header>
       <Navigation>
