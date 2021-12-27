@@ -16,3 +16,7 @@ Iniciado com create-react-app
 - [ ] Context API
 - [ ] CurrencyJs
 - [ ] Cashify
+
+# Status
+
+in progress
