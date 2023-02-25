@@ -45,7 +45,7 @@ function Main() {
           <h4>Choose the date:</h4>
           <DatePicker
             onChange={(value) => {
-              const isoFormat = dayjs(value.toJSON()).format("DD/MM/YYYY");
+              const isoFormat = dayjs(value?.toJSON()).format("DD/MM/YYYY");
               store.changeDate(isoFormat);
             }}
           />
