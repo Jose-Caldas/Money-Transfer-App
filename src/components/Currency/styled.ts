@@ -1,134 +1,71 @@
+import ButtonGroup from "antd/lib/button/button-group";
 import styled from "styled-components";
+import { Button } from "antd";
 
 export const Container = styled.div`
+  margin-top: 4rem;
+`;
+
+export const Wrapper = styled.div`
+  width: 100%;
+`;
+
+export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 2rem;
 
-  .currency-select {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-
-  .select {
-    width: 267px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin-bottom: 20px;
-
-    span {
-      display: flex;
-    }
-
-    span img {
-      height: 30px;
-      width: 30px;
-      margin: 0 10px 0 40px;
-    }
-
-    option {
-      font-size: 20px;
-    }
-  }
-
-  .currency-transfer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .transfer {
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f7fa;
-
-    width: 267px;
-    height: 128px;
-    border: none;
+  input {
+    width: 150px;
     font-size: 30px;
-    color: var(--title);
     font-weight: 600;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px;
-    margin-top: 20px;
+    color: #323f4b;
+    background-color: transparent;
   }
 
-  .refresh {
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border: none;
-    margin: 80px 15px;
-    cursor: pointer;
-    padding: 0;
+  @media (max-width: 640px) {
+    flex-direction: column;
   }
+`;
 
-  .refresh svg {
-    background: transparent;
-    border: none;
-    color: var(--pink200);
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-    justify-content: center;
-  }
+export const ButtonWrapper = styled.div`
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-  .transfer input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    text-align: center;
-    background-color: #f5f7fa;
-    outline: none;
-    color: ${(props) => props.theme.title};
-  }
+export const Refresh = styled(Button)`
+  border: none;
+`;
 
-  small {
-    color: var(--subTitle);
+export const Select = styled.select`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const Transfer = styled.div`
+  background-color: var(--gray200);
+  margin-top: 28px;
+  padding: 2rem;
+  border-radius: 8px;
+
+  p {
     font-size: 14px;
-    display: flex;
-    justify-content: start;
-    margin-bottom: 8px;
+    color: var(--gray);
+    margin-bottom: 1rem;
   }
+`;
 
-  @media (max-width: 768px) {
-    .currency-select {
-      flex-direction: column;
-    }
-    .refresh {
-      display: flex;
-      justify-content: center;
+export const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-      @media (max-width: 1200px) {
-        margin: 20px auto !important;
-        margin: 0;
-        padding: 0;
-      }
-    }
-
-    .select,
-    .transfer {
-      width: 267px;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .select,
-    .transfer {
-      width: 100%;
-    }
-    .refresh {
-      padding: 0;
-    }
-    .currency-select {
-      margin: 4rem 0;
-    }
-  }
+export const SelectContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 1rem 2rem;
+  border-radius: 8px;
+  background-color: var(--gray200);
 `;

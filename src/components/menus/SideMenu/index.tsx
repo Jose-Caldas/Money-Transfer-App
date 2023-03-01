@@ -15,7 +15,7 @@ function SideMenu() {
   return (
     <Container>
       <Header>
-        <img src={image} alt="" />
+        <img src={image} alt="avatar" />
         <div className="profile-info">
           <strong>John Doe</strong>
           <small>Code T544D4</small>

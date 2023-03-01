@@ -28,13 +28,13 @@ interface StoreState {
 }
 
 export const useStore = create<StoreState>((set) => ({
-  fromAmount: 0,
+  fromAmount: 1,
   setFromAmount: (value) => set(() => ({ fromAmount: Number(value) })),
   toAmount: 0,
   setToAmount: (value) => set(() => ({ toAmount: Number(value) })),
-  from: "EUR",
+  from: "USD",
   setFrom: (value) => set(() => ({ from: String(value) })),
-  to: "CAD",
+  to: "BRL",
   setTo: (value) => set(() => ({ to: String(value) })),
   plan: "",
   changePlan: (plan: string) => set(() => ({ plan })),
