@@ -20,6 +20,19 @@ export const Content = styled.div`
     font-weight: 600;
     color: #323f4b;
     background-color: transparent;
+    -moz-appearance: textfield;
+  }
+
+  /* Works for Chrome, Safari, Edge, Opera */
+  .toAmount::-webkit-outer-spin-button,
+  .toAmount::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Works for Firefox */
+  .toAmount {
+    -moz-appearance: textfield;
   }
 
   @media (max-width: 640px) {
@@ -28,7 +41,7 @@ export const Content = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;

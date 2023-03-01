@@ -2,37 +2,24 @@ import { DatePicker } from "antd";
 import Currency from "../Currency";
 import Plans from "../Plans";
 import { Container, ChoosePlan, Content } from "./styled";
-import { convert } from "cashify";
-import { useEffect } from "react";
-import { rates } from "../../mocks/rates";
+
 import dayjs from "dayjs";
 
 import { useStore } from "../context/store";
+import { formatNumber } from "../../utils/formatNumber";
 
 function Main() {
   const store = useStore((state) => state);
 
-  const from = store.from;
-  const to = store.to;
+  const available = 22000;
 
-  const result = convert(store.fromAmount, {
-    from,
-    to,
-    base: store.base,
-    rates,
-  });
-
-  useEffect(() => {
-    store.setToAmount(Number(result.toFixed(2)));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [result]);
+  const balance = available - store.fromAmount;
 
   return (
     <Container>
       <h1>Send Money</h1>
       <header>
-        <h2>$ 22,124</h2>
+        <h2>{formatNumber(balance)}</h2>
         <h3>available</h3>
       </header>
       <Content>

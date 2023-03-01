@@ -26,32 +26,23 @@ function Currencies() {
   const data = localStorage.getItem("store");
   console.log(data);
 
-  const handleToAmountChange = (e: { target: { value: any } }) => {
-    const result = convert(Number(e.target.value), {
-      from: store.from,
-      to: store.to,
-      base: store.base,
-      rates,
-    });
+  const result = convert(store.fromAmount, {
+    from: store.from,
+    to: store.to,
+    base: store.base,
+    rates,
+  });
 
+  useEffect(() => {
     store.setToAmount(Number(result.toFixed(2)));
-  };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [result]);
 
   function refresh() {
     store.setFrom(store.to);
     store.setTo(store.from);
   }
-
-  useEffect(() => {
-    const result = convert(store.fromAmount, {
-      from: store.from,
-      to: store.to,
-      base: store.base,
-      rates,
-    });
-    store.setToAmount(Number(result.toFixed(2)));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <S.Container>
@@ -147,11 +138,12 @@ function Currencies() {
             <p>Recipient gets</p>
             <S.InputContainer>
               <input
+                className="toAmount"
                 type="number"
                 min="1"
                 step="any"
                 value={store.toAmount}
-                onChange={handleToAmountChange}
+                onChange={() => {}}
               />
               <span>{store.to}</span>
             </S.InputContainer>
