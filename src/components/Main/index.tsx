@@ -16,11 +16,18 @@ function Main() {
 
   const message = balance < 0;
 
+  const numberFrom = balance;
+
+  const formatFrom = new Intl.NumberFormat("ja-JP", {
+    style: "currency",
+    currency: store.from,
+  }).format(numberFrom);
+
   return (
     <Container>
       <h1>Send Money</h1>
       <header>
-        <h2>{balance}</h2>
+        <h2>{formatFrom}</h2>
         {message ? <p>Insufficient funds</p> : <p>Available</p>}
       </header>
       <Content>

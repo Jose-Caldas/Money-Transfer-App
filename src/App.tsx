@@ -1,5 +1,4 @@
 import "../src/App.css";
-import Aside from "./components/Aside";
 import Main from "./components/Main";
 import MobileMenu from "./components/menus/mobileMenu";
 import SideMenu from "./components/menus/SideMenu";
@@ -9,6 +8,7 @@ import { GlobaStyles } from "./GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import theme from "./Theme/theme";
 import { CurrencyProvider } from "./components/context/useCurrencies";
+import PaymentDetails from "./components/PaymentDetails";
 
 function App() {
   return (
@@ -19,9 +19,7 @@ function App() {
           <TopMenu />
           <MobileMenu />
           <Main />
-
-          <Aside />
-
+          <PaymentDetails />
           <GlobaStyles />
         </ThemeProvider>
       </CurrencyProvider>

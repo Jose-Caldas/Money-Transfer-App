@@ -10,18 +10,25 @@ import {
 
 import { useStore } from "../context/store";
 
-function Aside() {
+function PaymentDetails() {
   const store = useStore();
 
-  function message() {
+  const handleConfirm = () => {
+    const message = {
+      message: "Transaction completed",
+      sentAt: `${store.date}`,
+      plan: `${store.plan}`,
+      sent: `${store.fromAmount}`,
+      received: `${store.toAmount}`,
+      from: `${store.from}`,
+      to: `${store.to}`,
+    };
     if (store.conversionRate && store.fromAmount) {
-      alert(
-        `Transaction completed: You send: ${store.fromAmount} / Recipient gets: ${store.toAmount} / Conversion Rate: ${store.conversionRate} / Delivery: ${store.date} / Payment Details: ${store.plan}`
-      );
+      window.alert(JSON.stringify(message, null, 2));
     } else {
-      alert("Incomplete Transaction: Choose a Plan and a Currency Conversion");
+      alert("Incomplete transaction: Choose a plan to confirm shipment");
     }
-  }
+  };
 
   const numberFrom = store.fromAmount;
 
@@ -29,14 +36,13 @@ function Aside() {
     style: "currency",
     currency: store.from,
   }).format(numberFrom);
+
   const numberTo = store.toAmount;
 
   const formatTo = new Intl.NumberFormat("ja-JP", {
     style: "currency",
     currency: store.to,
   }).format(numberTo);
-
-  console.log(formatFrom, formatTo);
 
   return (
     <Container>
@@ -105,7 +111,7 @@ function Aside() {
               <strong>$ {store.conversionRate}</strong>
             </div>
           </div>
-          <button title="Confirm transaction" onClick={message}>
+          <button title="Confirm transaction" onClick={handleConfirm}>
             Confirm
           </button>
         </div>
@@ -114,4 +120,4 @@ function Aside() {
   );
 }
 
-export default Aside;
+export default PaymentDetails;
