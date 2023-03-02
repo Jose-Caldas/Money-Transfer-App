@@ -47,10 +47,10 @@ function PaymentDetails() {
   return (
     <Container>
       <header>
-        <button>
+        <button onClick={handleConfirm}>
           <FiFileText />
         </button>
-        <button>
+        <button onClick={handleConfirm}>
           <FiHelpCircle />
         </button>
       </header>

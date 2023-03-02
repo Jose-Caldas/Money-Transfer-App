@@ -21,19 +21,15 @@ export const Container = styled.div`
     display: flex;
     justify-content: flex-end;
     padding: 0 1rem;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
 
   header button {
-    /* width: 54px; */
-    /* height: 54px; */
+    width: 54px;
+    height: 54px;
 
     background: var(--white);
     box-shadow: 0px 2px 7px rgba(123, 135, 148, 0.28);
-    border-radius: 100%;
+    border-radius: 50%;
     padding: 15px;
     margin-left: 2rem;
     &:hover {

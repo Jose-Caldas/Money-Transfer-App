@@ -18,7 +18,7 @@ function TopMenu() {
         <Profile>
           <img src={image} alt="" />
           <div className="info">
-            <strong>John Doe</strong>
+            <strong>Jose Caldas</strong>
             <small>2312T45B</small>
           </div>
         </Profile>
