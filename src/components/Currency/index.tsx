@@ -1,7 +1,7 @@
 import * as S from "./styled";
 
 import { FiRefreshCcw } from "react-icons/fi";
-import { Select, Button } from "antd";
+import { Select } from "antd";
 
 import { useCurrencies } from "../context/useCurrencies";
 import { useStore } from "../context/store";
@@ -89,7 +89,7 @@ function Currencies() {
                 step="any"
                 value={store.fromAmount}
                 onChange={handleFromAmountChange}
-                data-type="currency"
+                title="Choose a value to send "
               />
               <span>{store.from}</span>
             </S.InputContainer>
@@ -97,7 +97,12 @@ function Currencies() {
         </S.Wrapper>
         <S.ButtonWrapper>
           <S.Refresh>
-            <FiRefreshCcw size={24} color="var(--pink100)" onClick={refresh} />
+            <FiRefreshCcw
+              size={24}
+              color="var(--pink100)"
+              onClick={refresh}
+              title="Invert Send"
+            />
           </S.Refresh>
         </S.ButtonWrapper>
         <S.Wrapper>

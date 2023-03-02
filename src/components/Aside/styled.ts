@@ -181,7 +181,7 @@ export const Wrapper = styled.div`
   display: flex;
 
   @media (min-width: 1200px) {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   display: flex;

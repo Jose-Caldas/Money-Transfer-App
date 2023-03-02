@@ -6,7 +6,6 @@ import { Container, ChoosePlan, Content } from "./styled";
 import dayjs from "dayjs";
 
 import { useStore } from "../context/store";
-import { formatNumber } from "../../utils/formatNumber";
 
 function Main() {
   const store = useStore((state) => state);
@@ -15,12 +14,14 @@ function Main() {
 
   const balance = available - store.fromAmount;
 
+  const message = balance < 0;
+
   return (
     <Container>
       <h1>Send Money</h1>
       <header>
-        <h2>{formatNumber(balance)}</h2>
-        <h3>available</h3>
+        <h2>{balance}</h2>
+        {message ? <p>Insufficient funds</p> : <p>Available</p>}
       </header>
       <Content>
         <Currency />

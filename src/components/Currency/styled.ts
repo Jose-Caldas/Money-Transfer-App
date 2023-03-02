@@ -1,21 +1,31 @@
-import ButtonGroup from "antd/lib/button/button-group";
 import styled from "styled-components";
 import { Button } from "antd";
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 4rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
+  min-width: 284px;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
-  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
 
   input {
-    width: 150px;
+    width: 200px;
     font-size: 30px;
     font-weight: 600;
     color: #323f4b;
@@ -35,7 +45,7 @@ export const Content = styled.div`
     -moz-appearance: textfield;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 720px) {
     flex-direction: column;
   }
 `;
@@ -49,6 +59,9 @@ export const ButtonWrapper = styled.div`
 
 export const Refresh = styled(Button)`
   border: none;
+  &:hover {
+    box-shadow: 0 0 5px 1px var(--gray400);
+  }
 `;
 
 export const Select = styled.select`
@@ -60,7 +73,7 @@ export const Select = styled.select`
 export const Transfer = styled.div`
   background-color: var(--gray200);
   margin-top: 28px;
-  padding: 2rem;
+  padding: 2rem 1rem;
   border-radius: 8px;
 
   p {
@@ -78,7 +91,7 @@ export const InputContainer = styled.div`
 export const SelectContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 1rem 0 1rem 2rem;
+  padding: 1rem;
   border-radius: 8px;
   background-color: var(--gray200);
 `;
