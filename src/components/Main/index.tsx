@@ -40,9 +40,30 @@ function Main() {
         </div>
       </ChoosePlan>
 
-      <Plans date={store.date} text="Express" price={1.15} />
-      <Plans date={store.date} text="Standard" price={0.79} />
-      <Plans date={store.date} text="Economic" price={0.59} />
+      <Plans
+        date={store.date}
+        planType="Express"
+        price={1.15}
+        id="express"
+        value="express"
+        htmlFor="express"
+      />
+      <Plans
+        date={store.date}
+        planType="Standard"
+        price={0.79}
+        id="standard"
+        value="standard"
+        htmlFor="standard"
+      />
+      <Plans
+        date={store.date}
+        planType="Economic"
+        price={0.59}
+        id="economic"
+        value="economic"
+        htmlFor="economic"
+      />
     </Container>
   );
 }

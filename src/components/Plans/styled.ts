@@ -1,84 +1,96 @@
 import styled from "styled-components";
 
+export const Container = styled.section`
+  margin-top: 1rem;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+
+  span {
+    opacity: 0;
+    background-color: var(--pink200);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--pink100);
+  }
+
+  input {
+    &:checked + label {
+      background-color: var(--pink300);
+      border: 2px solid var(--pink100);
+      span {
+        opacity: 1;
+      }
+    }
+  }
+`;
+
+export const Input = styled.input`
+  appearance: none;
+`;
+
 export const Label = styled.label`
-  width: 100%;
-  height: 83px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  width: 100%;
+  padding: 1rem;
   border: 2px solid var(--gray400);
   border-radius: 4px;
-  padding: 10px;
-  margin-top: 20px;
-  background: transparent;
-  transition: 0.3s ease-in-out;
   cursor: pointer;
+
   &:hover {
-    box-shadow: 0 0 2px #f364a2;
-    background-color: #fff6f9;
-    border: 2px solid #f364a2;
+    border: 2px solid var(--pink100);
   }
 
-  .plan-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  h2 {
-    font-size: 18px;
-    color: ${(props) => props.theme.h2};
-    font-weight: 500;
-  }
-
-  small {
-    font-size: 14px;
-    color: ${(props) => props.theme.planSmall};
-  }
-
-  span {
-    color: ${(props) => props.theme.title};
+  h3 {
+    color: var(--title);
     font-size: 18px;
     font-weight: 600;
   }
+`;
 
-  .options {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 20px;
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray400);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #fff;
+  position: relative;
+
+  svg {
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+  }
+`;
+
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const InfoPlan = styled.div`
+  margin-left: 2rem;
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--title);
   }
 
-  .center {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: start;
-  }
-
-  .radio input {
-    cursor: pointer;
-  }
-
-  .radio svg {
-    width: 20px;
-    height: 20px;
-    background-color: ${(props) => props.theme.checkbox};
-    color: ${(props) => props.theme.checkbox};
-    margin-right: 20px;
-    border: 1px solid gray;
-    border-radius: 50%;
-    color: #f364a2;
-
-    &:focus {
-      display: block;
-    }
-  }
-
-  @media (max-width: 768px) {
-    margin-bottom: 2rem;
+  h2 {
+    font-size: 14px;
+    color: var(--subTitle);
   }
 `;
