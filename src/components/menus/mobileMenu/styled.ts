@@ -2,8 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+  width: 0;
+  height: 0;
+
+  @media (max-width: 947px) {
+    width: 100%;
+    height: 113px;
+  }
 `;
 
 export const Header = styled.div`
@@ -11,9 +17,10 @@ export const Header = styled.div`
 
   display: none;
 
-  @media (max-width: 890px) {
+  @media (max-width: 947px) {
     display: block;
     display: flex;
+    align-items: center;
     gap: 16px;
 
     .profile-info {
@@ -40,9 +47,9 @@ export const Wrapper = styled.div`
     height: 60px;
     background-color: #f7f5fa;
     border-radius: 50%;
-    position: fixed;
-    top: 20px;
-    right: 75px;
+    position: absolute;
+    top: 48px;
+    right: 23px;
     cursor: pointer;
     box-shadow: 0 0 0 0 #f7f5fa, 0 0 0 0 #f7f5fa;
     transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -131,7 +138,7 @@ export const Wrapper = styled.div`
     margin-right: 20px;
   }
 
-  @media (max-width: 890px) {
+  @media (max-width: 947px) {
     display: block;
     z-index: 10;
   }

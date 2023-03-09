@@ -6,17 +6,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
-  padding: 0.5rem;
   margin-bottom: 2rem;
 `;
 
 export const Wrapper = styled.div`
-  min-width: 284px;
-
-  @media (max-width: 800px) {
-    width: 100%;
-    flex-direction: column;
-  }
+  width: 100%;
 `;
 
 export const Content = styled.div`
@@ -25,7 +19,8 @@ export const Content = styled.div`
   justify-content: center;
 
   input {
-    width: 200px;
+    width: 100%;
+
     font-size: 30px;
     font-weight: 600;
     color: #323f4b;
@@ -86,6 +81,7 @@ export const Transfer = styled.div`
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 export const SelectContainer = styled.div`

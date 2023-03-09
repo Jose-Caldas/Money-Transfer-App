@@ -2,14 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: none;
+
   ul {
     width: 100%;
+    margin: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
     color: #000;
   }
+
   li {
     display: flex;
     flex-direction: column;
@@ -25,9 +28,10 @@ export const Container = styled.div`
 
   @media (max-width: 1200px) {
     display: block;
-    background-color: #f5f7fa;
+
+    padding: 0.5rem;
   }
-  @media (max-width: 890px) {
+  @media (max-width: 947px) {
     display: none;
   }
   @media (max-width: 768px) {

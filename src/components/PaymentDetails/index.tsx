@@ -68,10 +68,7 @@ function PaymentDetails() {
               <h2>{formatFrom}</h2>
               {store.from}
             </div>
-            <div>
-              <FiArrowRight />
-            </div>
-
+            <FiArrowRight />
             <div>
               <h2>{formatTo}</h2>
               {store.to}
