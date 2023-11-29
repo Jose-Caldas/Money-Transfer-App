@@ -1,34 +1,27 @@
-import { DatePicker } from "antd";
-import Currency from "../Currency";
-import Plans from "../Plans";
-import { Container, ChoosePlan, Content } from "./styled";
+import { DatePicker } from 'antd'
+import Currency from '../Currency'
+import Plans from '../Plans'
+import { Container, ChoosePlan, Content } from './styled'
 
-import dayjs from "dayjs";
+import dayjs from 'dayjs'
 
-import { useStore } from "../context/store";
+import { useStore } from '../context/store'
 
 function Main() {
-  const store = useStore((state) => state);
+  const store = useStore((state) => state)
 
-  const available = 22000;
+  const available = 4500
 
-  const balance = available - store.fromAmount;
-
-  const message = balance < 0;
-
-  const numberFrom = balance;
-
-  const formatFrom = new Intl.NumberFormat("ja-JP", {
-    style: "currency",
+  const formatFrom = new Intl.NumberFormat('ja-JP', {
+    style: 'currency',
     currency: store.from,
-  }).format(numberFrom);
+  }).format(available)
 
   return (
     <Container>
       <h1>Send Money</h1>
       <header>
         <h2>{formatFrom}</h2>
-        {message ? <p>Insufficient funds</p> : <p>Available</p>}
       </header>
       <Content>
         <Currency />
@@ -40,8 +33,8 @@ function Main() {
           <h4>Choose the date:</h4>
           <DatePicker
             onChange={(value) => {
-              const isoFormat = dayjs(value?.toJSON()).format("DD/MM/YYYY");
-              store.changeDate(isoFormat);
+              const isoFormat = dayjs(value?.toJSON()).format('DD/MM/YYYY')
+              store.changeDate(isoFormat)
             }}
           />
         </div>
@@ -72,7 +65,7 @@ function Main() {
         htmlFor="economic"
       />
     </Container>
-  );
+  )
 }
 
-export default Main;
+export default Main

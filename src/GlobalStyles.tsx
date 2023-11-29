@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import "antd/dist/antd.css";
+import { createGlobalStyle } from 'styled-components'
+// import "antd/dist/antd.css";
 
 export const GlobaStyles = createGlobalStyle`
 *{
@@ -72,4 +72,4 @@ body{
         color: var(--title)
     }
 
-`;
+`
